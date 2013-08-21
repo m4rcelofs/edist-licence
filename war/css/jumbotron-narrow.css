@@ -1,0 +1,86 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile-first views */
+.header,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+.new{
+	background-color: #f4f4f4;
+	padding: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .new {
+    padding: 30px 20px;
+    border-radius: 6px;
+    height:400px;
+  }
+  
+  .citizen_avatar{
+  border: 5px solid rgba(0,0,0,1);
+  width: 163px ;
+  height:163px;
+  text-align: center;
+  left:50%;
+  margin-left:-79px;
+  position: absolute;
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  }
+  
+  [class*="col-4"] {
+  min-height:100%;
+  border-left: 1px solid rgba(0,0,0,.1);
+}
+  
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Custom container */
+.container-narrow {
+  margin: 0 auto;
+  max-width: 700px;
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+}

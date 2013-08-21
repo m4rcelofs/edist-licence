@@ -10,6 +10,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.spec.KeySpec;
+import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -30,10 +31,10 @@ public class AssymetricCipherUtils {
 	private static Logger		logger		= Logger.getLogger(AssymetricCipherUtils.class
 													.getName());
 
-	public static String validateLicence(String encripted) throws Exception {
+	public static String validateLicence(String signed) throws Exception {
 		Cipher rsa = Cipher.getInstance(CIPHER);
 		rsa.init(Cipher.DECRYPT_MODE, getLicencePublicKey());
-		return new String(rsa.doFinal(Base64.decodeBase64(encripted)));
+		return new String(rsa.doFinal(Base64.decodeBase64(signed)));
 	}
 
 	public static String signLicence(String plain) throws Exception {
@@ -81,7 +82,7 @@ public class AssymetricCipherUtils {
 	private static PrivateKey generatePrivate(byte[] privateKeyBytes)
 			throws Exception {
 		KeyFactory keyFactory = KeyFactory.getInstance(ALGORITHM);
-		KeySpec keySpec = new X509EncodedKeySpec(privateKeyBytes);
+		KeySpec keySpec = new PKCS8EncodedKeySpec(privateKeyBytes);
 		return keyFactory.generatePrivate(keySpec);
 	}
 
@@ -99,5 +100,4 @@ public class AssymetricCipherUtils {
 
 		System.out.println(Base64.encodeBase64String(privateKey.getEncoded()));
 	}
-
 }

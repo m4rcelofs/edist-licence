@@ -1,18 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xmlns="http://java.sun.com/xml/ns/javaee"
-xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<!-- external facade -->
 	<servlet>
-		<servlet-name>EDist_Licence</servlet-name>
-		<servlet-class>com.erep.dist.licence.LicenceServlet</servlet-class>
+		<servlet-name>getLicence</servlet-name>
+		<servlet-class>com.erep.dist.licence.GetLicenceServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>EDist_Licence</servlet-name>
-		<url-pattern>/edist_licence</url-pattern>
+		<servlet-name>getLicence</servlet-name>
+		<url-pattern>/getlicence</url-pattern>
 	</servlet-mapping>
+
+	<!-- private dwr -->
+	<servlet>
+		<display-name>DWR Management Servlet</display-name>
+		<servlet-name>dwr-management-invoker</servlet-name>
+		<servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+		<init-param>
+			<param-name>classes</param-name>
+			<param-value>
+				com.erep.dist.licence.ManagementService,
+				com.erep.dist.licence.data.Licence,
+				com.erep.dist.licence.dwr.LicencesQuery
+    		</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>dwr-management-invoker</servlet-name>
+		<url-pattern>/admin/dwr/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- default file -->
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
+
+	<!-- security -->
+	<security-constraint>
+		<web-resource-collection>
+			<url-pattern>/admin/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+
 </web-app>

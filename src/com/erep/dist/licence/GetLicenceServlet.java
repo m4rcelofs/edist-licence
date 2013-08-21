@@ -1,6 +1,8 @@
 package com.erep.dist.licence;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.jdo.JDOObjectNotFoundException;
 import javax.servlet.http.*;
@@ -11,7 +13,10 @@ import com.erep.dist.auth.AssymetricCipherUtils;
 import com.erep.dist.licence.data.Licence;
 
 @SuppressWarnings("serial")
-public class LicenceServlet extends HttpServlet {
+public class GetLicenceServlet extends HttpServlet {
+
+	private static Logger	logger	= Logger.getLogger(GetLicenceServlet.class
+											.getName());
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
@@ -21,6 +26,7 @@ public class LicenceServlet extends HttpServlet {
 		String appId = req.getParameter("appId");
 
 		if (appId == null || appId.trim().isEmpty()) {
+			logger.log(Level.WARNING, "Invalid request");
 			resp.sendError(400);
 			return;
 		}
@@ -35,9 +41,13 @@ public class LicenceServlet extends HttpServlet {
 				resp.getWriter().write(signed);
 
 			} catch (JDOObjectNotFoundException e) {
+				logger.log(Level.WARNING, "Invalid request for appId {0}",
+						appId);
 				resp.sendError(404);
 				return;
 			} catch (Exception e) {
+				logger.log(Level.SEVERE, "Error in request for appId " + appId,
+						e);
 				resp.sendError(503);
 				return;
 			}
