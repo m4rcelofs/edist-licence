@@ -31,9 +31,10 @@ function loadLicences(sortFunction) {
 }
 
 function saveLicence() {
-	
+	$('#result').hide();
 	if(!$('#add-form').valid()) {
 		$('#result').attr('src', '../img/error.png');
+		$('#result').fadeIn('slow');
 		return;
 	}
 	
@@ -48,12 +49,14 @@ function saveLicence() {
 		callback : function(response) {
 			if (response) {
 				$('#result').attr('src', '../img/valid.png');
+				$('#result').fadeIn('slow');
 				loadLicences();
 			}
 			$('#add-form :input').prop("disabled", false);
 		},
 		errorHandler : function(message) {
 			$('#result').attr('src', '../img/error.png');
+			$('#result').fadeIn('slow');
 			$('#add-form :input').prop("disabled", false);
 		}
 	});
