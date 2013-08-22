@@ -20,7 +20,7 @@ public class GetLicenceServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
-		resp.setContentType("application/json");
+		resp.setContentType("text/plain");
 		resp.setCharacterEncoding("UTF-8");
 
 		String appId = req.getParameter("appId");
