@@ -1,5 +1,6 @@
 function loadLicences(sortFunction) {
 	$('#licences').hide();
+	$('#loading').show();
 	$('#licences > tbody > tr').remove();
 	ManagementService.listLicences({
 		callback : function(response) {
@@ -24,6 +25,7 @@ function loadLicences(sortFunction) {
 				
 				$('#licences').append(row);
 			});
+			$('#loading').hide();
 			$('#licences').fadeIn('slow');
 		},
 		errorHandler : errorHandlerFunction

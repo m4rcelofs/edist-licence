@@ -25,7 +25,8 @@
 <!-- <script type='text/javascript' src='dwr/engine.js'></script> -->
 <!-- <script type='text/javascript' src='dwr/interface/ManagementService.js'></script> -->
 <script type='text/javascript' src='dwr-engine-20130822.cache.js'></script>
-<script type='text/javascript' src='dwr-ManagementService-20130822.cache.js'></script>
+<script type='text/javascript'
+	src='dwr-ManagementService-20130822.cache.js'></script>
 
 </head>
 <body onload="loadLicences(sortByEdition)">
@@ -55,9 +56,9 @@
 
 
 					<div class="form-group col-lg-4">
-						<input id="validUntil" name="validUntil"
-							placeholder="validade" class="form-control" required
-							type="number" step="1" minlength="4" min="2000" max="9999">
+						<input id="validUntil" name="validUntil" placeholder="validade"
+							class="form-control" required type="number" step="1"
+							minlength="4" min="2000" max="9999">
 					</div>
 
 					<!-- Button -->
@@ -82,12 +83,16 @@
 					<tr>
 						<th onclick="loadLicences(sortById);">Application ID</th>
 						<th onclick="loadLicences(sortByValidity);">Validade</th>
-						<th onclick="loadLicences(sortByEdition);">Data da última alteração</th>
+						<th onclick="loadLicences(sortByEdition);">Data da última
+							alteração</th>
 						<th onclick="loadLicences(sortByEditor);">Usuário</th>
 					</tr>
 				</thead>
 				<tbody></tbody>
 			</table>
+			<div class="text-center">
+				<img id="loading" src="../img/loader.cache.gif">
+			</div>
 		</div>
 		<div class="footer"></div>
 	</div>
