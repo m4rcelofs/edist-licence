@@ -22,6 +22,14 @@ public class Licence {
 	@Persistent
 	@RemoteProperty
 	private Integer	validUntilDay;
+	
+	@Persistent
+	@RemoteProperty
+	private Integer	userLimit;
+	
+	@Persistent
+	@RemoteProperty
+	private String	contactEmail;
 
 	@Persistent
 	@RemoteProperty
@@ -61,6 +69,22 @@ public class Licence {
 
 	public void setEditedBy(String editedBy) {
 		this.editedBy = editedBy;
+	}
+
+	public Integer getUserLimit() {
+		return userLimit;
+	}
+
+	public void setUserLimit(Integer userLimit) {
+		this.userLimit = userLimit;
+	}
+
+	public String getContactEmail() {
+		return contactEmail;
+	}
+
+	public void setContactEmail(String contactEmail) {
+		this.contactEmail = contactEmail;
 	}
 
 }

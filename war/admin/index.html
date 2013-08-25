@@ -49,16 +49,27 @@
 				<fieldset>
 					<legend>Adicionar Licença</legend>
 
-					<div class="form-group col-lg-6">
+					<div class="form-group col-lg-3">
 						<input id="appId" name="appId" placeholder="appengine id"
 							class="form-control" required type="text" minlength="6" maxlength="30">
 					</div>
 
 
-					<div class="form-group col-lg-4">
+					<div class="form-group col-lg-2">
 						<input id="validUntil" name="validUntil" placeholder="validade"
-							class="form-control" required type="number" step="1"
+							class="form-control"  type="number" step="1"
 							minlength="4" min="2000" max="9999">
+					</div>
+					
+					<div class="form-group col-lg-2">
+						<input id="userLimit" name="userLimit" placeholder="jogadores"
+							class="form-control"  type="number" step="1"
+							minlength="1" min="1" max="999">
+					</div>
+					
+					<div class="form-group col-lg-3">
+						<input id="contactEmail" name="contactEmail" placeholder="email"
+							class="form-control"  type="text">
 					</div>
 
 					<!-- Button -->
@@ -83,6 +94,8 @@
 					<tr>
 						<th onclick="loadLicences(sortById);">Application ID</th>
 						<th onclick="loadLicences(sortByValidity);">Validade</th>
+						<th onclick="loadLicences(sortByUserLimit);">Limite de Usuários</th>
+						<th onclick="loadLicences(sortByEmail);">Email de Contato</th>
 						<th onclick="loadLicences(sortByEdition);">Data da última
 							alteração</th>
 						<th onclick="loadLicences(sortByEditor);">Usuário</th>

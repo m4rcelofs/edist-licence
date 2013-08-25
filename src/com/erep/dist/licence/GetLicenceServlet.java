@@ -7,6 +7,8 @@ import java.util.logging.Logger;
 import javax.jdo.JDOObjectNotFoundException;
 import javax.servlet.http.*;
 
+import org.json.simple.JSONObject;
+
 import com.erep.dist.CloseablePM;
 import com.erep.dist.PMF;
 import com.erep.dist.auth.AssymetricCipherUtils;
@@ -18,6 +20,7 @@ public class GetLicenceServlet extends HttpServlet {
 	private static Logger	logger	= Logger.getLogger(GetLicenceServlet.class
 											.getName());
 
+	@SuppressWarnings("unchecked")
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		resp.setContentType("text/plain");
@@ -35,8 +38,11 @@ public class GetLicenceServlet extends HttpServlet {
 			try {
 				Licence licence = pm.getObjectById(Licence.class, appId);
 
-				String signed = AssymetricCipherUtils.signLicence(licence
-						.getValidUntilDay().toString());
+				JSONObject jsObj = new JSONObject();
+				jsObj.put("validUntilDay", licence.getValidUntilDay());
+				jsObj.put("userLimit", licence.getUserLimit());
+				
+				String signed = AssymetricCipherUtils.signLicence(jsObj.toJSONString());
 
 				resp.getWriter().write(signed);
 

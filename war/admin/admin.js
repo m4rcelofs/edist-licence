@@ -7,22 +7,21 @@ function loadLicences(sortFunction) {
 			$('#validUntil').prop('min', response.eRepDay);
 
 			response.licences.sort(sortFunction);
-			
+
 			response.licences.forEach(function(entry) {
 				var clazz = '';
-				if(entry.validUntilDay < response.eRepDay) {
+				if (entry.validUntilDay < response.eRepDay) {
 					clazz = 'danger';
 				} else if (entry.validUntilDay < (response.eRepDay + 14)) {
 					clazz = 'warning';
 				}
-				
-				var row = 
-					'<tr class="' + clazz +'"><td>' + entry.appId + 
-					'</td><td>' + entry.validUntilDay + 
-					'</td><td>' + entry.editedAt.toLocaleString() + 
-					'</td><td>' + entry.editedBy + 
-					'</td></tr>';
-				
+
+				var row = '<tr class="' + clazz + '"><td>' + entry.appId
+						+ '</td><td>' + entry.validUntilDay + '</td><td>'
+						+ entry.userLimit + '</td><td>' + entry.contactEmail
+						+ '</td><td>' + entry.editedAt.toLocaleString()
+						+ '</td><td>' + entry.editedBy + '</td></tr>';
+
 				$('#licences').append(row);
 			});
 			$('#loading').hide();
@@ -34,17 +33,19 @@ function loadLicences(sortFunction) {
 
 function saveLicence() {
 	$('#result').hide();
-	if(!$('#add-form').valid()) {
+	if (!$('#add-form').valid()) {
 		$('#result').attr('src', '../img/error.cache.png');
 		$('#result').fadeIn('slow');
 		return;
 	}
-	
+
 	$('#add-form :input').prop("disabled", true);
-	
+
 	var licence = {
 		appId : $('#appId').val(),
-		validUntilDay : parseInt($('#validUntil').val()),
+		validUntilDay : $('#validUntil').val(),
+		userLimit : $('#userLimit').val(),
+		contactEmail : $('#contactEmail').val()
 	};
 
 	ManagementService.addLicence(licence, {
@@ -70,6 +71,14 @@ function sortByEdition(a, b) {
 
 function sortByValidity(a, b) {
 	return a.validUntilDay - b.validUntilDay;
+}
+
+function sortByUserLimit(a, b) {
+	return a.userLimit - b.userLimit;
+}
+
+function sortByEmail(a, b) {
+	return a.contactEmail - b.contactEmail;
 }
 
 function sortById(a, b) {

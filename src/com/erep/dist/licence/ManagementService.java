@@ -3,6 +3,9 @@ package com.erep.dist.licence;
 import java.util.Date;
 import java.util.List;
 
+import javax.jdo.JDOObjectNotFoundException;
+import javax.jdo.PersistenceManager;
+
 import org.directwebremoting.annotations.RemoteMethod;
 import org.directwebremoting.annotations.RemoteProxy;
 
@@ -32,13 +35,38 @@ public class ManagementService {
 	public boolean addLicence(Licence licence) {
 		try (CloseablePM pm = PMF.getNewPersistenceManager()) {
 
-			licence.setEditedAt(new Date());
-			licence.setEditedBy(UserServiceFactory.getUserService()
-					.getCurrentUser().getEmail());
+			try {
+				Licence original = pm.getObjectById(Licence.class,
+						licence.getAppId());
+				return edit(original, licence);
+			} catch (JDOObjectNotFoundException e) {
+				return add(pm, licence);
+			}
 
-			pm.makePersistent(licence);
-			return true;
 		}
+	}
+
+	private boolean edit(Licence original, Licence edited) {
+		if (edited.getContactEmail() != null
+				&& !edited.getContactEmail().trim().isEmpty())
+			original.setContactEmail(edited.getContactEmail());
+		if (edited.getUserLimit() != null)
+			original.setUserLimit(edited.getUserLimit());
+		if (edited.getValidUntilDay() != null)
+			original.setValidUntilDay(edited.getValidUntilDay());
+
+		original.setEditedAt(new Date());
+		original.setEditedBy(UserServiceFactory.getUserService()
+				.getCurrentUser().getEmail());
+		return true;
+	}
+
+	private boolean add(PersistenceManager pm, Licence licence) {
+		licence.setEditedAt(new Date());
+		licence.setEditedBy(UserServiceFactory.getUserService()
+				.getCurrentUser().getEmail());
+		pm.makePersistent(licence);
+		return true;
 	}
 
 }
