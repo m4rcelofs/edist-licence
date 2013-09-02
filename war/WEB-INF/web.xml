@@ -15,6 +15,15 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<url-pattern>/getlicence</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>updateEmail</servlet-name>
+		<servlet-class>com.erep.dist.licence.UpdateEmailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateEmail</servlet-name>
+		<url-pattern>/updateEmail</url-pattern>
+	</servlet-mapping>
+
 	<!-- private dwr -->
 	<servlet>
 		<display-name>DWR Management Servlet</display-name>
@@ -23,7 +32,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<init-param>
 			<param-name>classes</param-name>
 			<param-value>
-				com.erep.dist.licence.ManagementService,
+				com.erep.dist.licence.dwr.ManagementService,
 				com.erep.dist.licence.data.Licence,
 				com.erep.dist.licence.dwr.LicencesQuery
     		</param-value>

@@ -1,4 +1,4 @@
-package com.erep.dist.licence;
+package com.erep.dist.licence.dwr;
 
 import java.util.Date;
 import java.util.List;
@@ -13,7 +13,6 @@ import com.erep.dist.CloseablePM;
 import com.erep.dist.PMF;
 import com.erep.dist.erep.eRepTimeCalculator;
 import com.erep.dist.licence.data.Licence;
-import com.erep.dist.licence.dwr.LicencesQuery;
 import com.google.appengine.api.users.UserServiceFactory;
 
 @RemoteProxy

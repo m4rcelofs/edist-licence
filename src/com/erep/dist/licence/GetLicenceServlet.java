@@ -42,7 +42,7 @@ public class GetLicenceServlet extends HttpServlet {
 				jsObj.put("validUntilDay", licence.getValidUntilDay());
 				jsObj.put("userLimit", licence.getUserLimit());
 				
-				String signed = AssymetricCipherUtils.signLicence(jsObj.toJSONString());
+				String signed = AssymetricCipherUtils.sign(jsObj.toJSONString());
 
 				resp.getWriter().write(signed);
 

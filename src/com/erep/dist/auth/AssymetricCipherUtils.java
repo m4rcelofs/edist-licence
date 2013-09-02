@@ -31,16 +31,28 @@ public class AssymetricCipherUtils {
 	private static Logger		logger		= Logger.getLogger(AssymetricCipherUtils.class
 													.getName());
 
-	public static String validateLicence(String signed) throws Exception {
+	public static String validateSigned(String signed) throws Exception {
 		Cipher rsa = Cipher.getInstance(CIPHER);
 		rsa.init(Cipher.DECRYPT_MODE, getLicencePublicKey());
 		return new String(rsa.doFinal(Base64.decodeBase64(signed)));
 	}
 
-	public static String signLicence(String plain) throws Exception {
+	public static String sign(String plain) throws Exception {
 		Cipher rsa = Cipher.getInstance(CIPHER);
 		rsa.init(Cipher.ENCRYPT_MODE, getLicencePrivateKey());
 		return Base64.encodeBase64String(rsa.doFinal(plain.getBytes()));
+	}
+
+	public static String encryptPublic(String plain) throws Exception {
+		Cipher rsa = Cipher.getInstance(CIPHER);
+		rsa.init(Cipher.ENCRYPT_MODE, getLicencePublicKey());
+		return Base64.encodeBase64String(rsa.doFinal(plain.getBytes()));
+	}
+
+	public static String decryptPublic(String encripted) throws Exception {
+		Cipher rsa = Cipher.getInstance(CIPHER);
+		rsa.init(Cipher.DECRYPT_MODE, getLicencePrivateKey());
+		return new String(rsa.doFinal(Base64.decodeBase64(encripted)));
 	}
 
 	private static PublicKey getLicencePublicKey() throws Exception {
