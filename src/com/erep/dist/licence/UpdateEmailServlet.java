@@ -35,7 +35,7 @@ public class UpdateEmailServlet extends HttpServlet {
 		try {
 			decodedObj = AssymetricCipherUtils.decryptPublic(encrypted);
 		} catch (Exception e) {
-			logger.log(Level.WARNING, "Invalid request");
+			logger.log(Level.WARNING, "Invalid request: '" + encrypted + "'");
 			throw new IOException(e);
 		}
 
