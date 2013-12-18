@@ -23,6 +23,17 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-name>updateEmail</servlet-name>
 		<url-pattern>/updateEmail</url-pattern>
 	</servlet-mapping>
+	
+	<!-- cron -->
+	
+	<servlet>
+		<servlet-name>notifyLicenceExpiring</servlet-name>
+		<servlet-class>com.erep.dist.licence.EmailNotificationJob</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>notifyLicenceExpiring</servlet-name>
+		<url-pattern>/admin/cron/notifyLicence</url-pattern>
+	</servlet-mapping>
 
 	<!-- private dwr -->
 	<servlet>
