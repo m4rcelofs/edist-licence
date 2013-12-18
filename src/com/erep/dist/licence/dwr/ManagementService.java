@@ -106,12 +106,11 @@ public class ManagementService {
 
 			message.append("<p>Hello!</p>");
 
-			message.append(
-					"<p>This is automatic notification that licence for the eDist Application ")
-					.append(licence.getAppId())
-					.append(" used by your Military Unit has been changed.</p>");
+			message.append("<p>This is automatic notification that the licence for the eDist Application "
+					+ "used by your Military Unit has been changed.</p>");
 
-			message.append("<p>- Valid Until eDay: ")
+			message.append("<p>- AppID: ").append(licence.getAppId())
+					.append("<br />- Valid until eDay: ")
 					.append(licence.getValidUntilDay())
 					.append("<br />- Maximum number of users: ")
 					.append(licence.getUserLimit()).append("</p>");
@@ -122,8 +121,10 @@ public class ManagementService {
 					+ "- <a href=\"http://www.erepublikbr.com/private.php?do=newpm&u=5602\">The eBR Forums</a></p>");
 
 			message.append("<p>Regards, <br /> eDist Development</p> ");
-			message.append("<p><small>This is an automated message. Please do not reply directly to this address "
-					+ "as your message as your message will not be received.</small></p>");
+			message.append("<p></p><p><small>Today is eDay ")
+					.append(eRepTimeCalculator.geteRepDay())
+					.append(".<br />This is an automated message. Please do not reply directly to this address "
+							+ "as your message will not be received.</small></p>");
 
 			mailer.mail(subject, message.toString(), mailer.new MailAddress(
 					licence.getContactEmail()),

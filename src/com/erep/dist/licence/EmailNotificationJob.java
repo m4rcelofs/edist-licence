@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.erep.dist.CloseablePM;
 import com.erep.dist.Mailer;
 import com.erep.dist.PMF;
+import com.erep.dist.erep.eRepTimeCalculator;
 import com.erep.dist.licence.data.Licence;
 
 public class EmailNotificationJob extends HttpServlet {
@@ -61,8 +62,10 @@ public class EmailNotificationJob extends HttpServlet {
 							+ "- <a href=\"http://www.erepublikbr.com/private.php?do=newpm&u=5602\">The eBR Forums</a></p>");
 
 					message.append("<p>Regards, <br /> eDist Development</p> ");
-					message.append("<p><small>This is an automated message. Please do not reply directly to this address "
-							+ "as your message as your message will not be received.</small></p>");
+					message.append("<p></p><p><small>Today is eDay ")
+							.append(eRepTimeCalculator.geteRepDay())
+							.append(".<br />This is an automated message. Please do not reply directly to this address "
+									+ "as your message will not be received.</small></p>");
 
 					mailer.mail(subject, message.toString(),
 							mailer.new MailAddress(licence.getContactEmail()),
