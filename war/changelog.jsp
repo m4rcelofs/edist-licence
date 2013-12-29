@@ -1,0 +1,69 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
+<t:wrapper>
+
+	<jsp:attribute name="imports">
+	</jsp:attribute>
+
+	<jsp:body>
+		<h2>Changelog</h2>
+		
+		<p>
+			<strong>201X-XX-XX v0.6</strong> <small>not released yet</small>
+		</p>
+		<ul>
+			<li>Enabled aggresive caching of static files</li>
+			<li>Enabled memcache</li>
+			<li>Case insensitive player search</li>
+			<li>Small UI improvements</li>
+			<li>Bug Fix: Employer userscript</li>
+		</ul>
+			
+		
+		<p>
+			<strong>2013-12-27 v0.5</strong>
+		</p>
+		<ul>
+			<li>Player stats/fight reports</li>
+			<li>Now tracks player names/avatars over time</li>
+		</ul>
+	 
+	 
+		<p>
+			<strong>2013-12-23 v0.4</strong>
+		</p>
+		<ul>
+			<li>Filtering for managing players</li>
+			<li>Allowed manual status change while managing players</li>
+		</ul>
+	
+	
+		<p>
+			<strong>2013-12-21 v0.3</strong>
+		</p>
+		<ul>
+			<li>Bug fixes</li>
+			<li>UI improvements</li>
+			<li>Work reports</li>
+		</ul>
+	
+	
+		<p>
+			<strong>2013-12-16 0.2</strong>
+		</p>
+		
+		<ul>
+			<li>Dist reports</li>
+		</ul>
+	
+	
+		<p>
+			<strong>2013-12-07 v0.1</strong>		
+		</p>
+		<ul>
+			<li>Initial release: form, admin and management</li>	
+		</ul>
+
+	</jsp:body>
+</t:wrapper>
