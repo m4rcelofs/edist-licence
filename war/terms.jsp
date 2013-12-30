@@ -50,12 +50,15 @@
 		<p>A mensalidade tem seu valor variável conforme o número de
 			usuários cadastrados no sistema, e deve ser paga antecipadamente. É
 			reembolsável proporcionalmente ao número de dias restantes até o
-			término da licensa.</p>
+			término da licença.</p>
+		<p>Uma licença é válida para uma única Unidade Militar. Não é permitido 
+			o uso compartilhado de uma mesma licença entre múltiplas Unidades Militares.</p>
+		<p>Instalações que não estiverem em dia com o pagamento do licenciamento  
+			terão suas funcionalidades bloqueadas automaticamente.</p>
 		<p>O licenciamento pode ser cancelado pelo cliente ou pelo desenvolvedor 
 			com aviso prévio de 48h, com direito a reembolso como especificado 
 			acima.</p>
-		<p>Instalações que não estiverem em dia com o pagamento do licenciamento  
-			terão suas funcionalidades bloqueadas automaticamente.</p>
+		
 
 		<h3>Das Atualizações de Software</h3>
 		<p>Está incluída na mensalidade a correção de bugs reportados e
@@ -84,6 +87,7 @@
 		<h3>Dos Termos e Condições</h3>
 		<p>A utilização do sistema eDist implica na plena aceitação destes
 			Termos e Condições.</p>
+		<p>Situações omissas dos Termos e Condições serão julgadas única e exclusivamente pelo desenvolvedor.</p>
 		<p>Os Termos e Condições estão sujeitos a mudanças pelo
 			desenvolvedor, com aviso prévio de 48h.</p>
 
