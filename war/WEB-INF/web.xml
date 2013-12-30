@@ -5,6 +5,8 @@
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
 
+
+
 	<!-- external facade -->
 	<servlet>
 		<servlet-name>getLicence</servlet-name>
@@ -23,9 +25,9 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-name>updateEmail</servlet-name>
 		<url-pattern>/updateEmail</url-pattern>
 	</servlet-mapping>
-	
+
 	<!-- cron -->
-	
+
 	<servlet>
 		<servlet-name>notifyLicenceExpiring</servlet-name>
 		<servlet-class>com.erep.dist.licence.EmailNotificationJob</servlet-class>
@@ -53,6 +55,47 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	<servlet-mapping>
 		<servlet-name>dwr-management-invoker</servlet-name>
 		<url-pattern>/admin/dwr/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- pages -->
+	<servlet>
+		<servlet-name>changelogPage</servlet-name>
+		<jsp-file>/changelog.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>changelogPage</servlet-name>
+		<url-pattern>/changelog/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>pricesPage</servlet-name>
+		<jsp-file>/prices.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>pricesPage</servlet-name>
+		<url-pattern>/prices/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>termsPage</servlet-name>
+		<jsp-file>/terms.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>termsPage</servlet-name>
+		<url-pattern>/terms/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>indexPage</servlet-name>
+		<jsp-file>/index.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>indexPage</servlet-name>
+		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
 
 	<!-- default file -->

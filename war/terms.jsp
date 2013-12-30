@@ -40,7 +40,7 @@
 			mensalidade.</p>
 
 		<h3>
-			Dos Custos de Licenciamento <small><a href="prices.html">Valores</a></small>
+			Dos Custos de Licenciamento <small><a href="prices">Valores</a></small>
 		</h3>
 		<p>É cobrado de cada Unidade Militar licenciada um valor de
 			instalação do sistema e uma mensalidade de manutenção.</p>
@@ -51,6 +51,11 @@
 			usuários cadastrados no sistema, e deve ser paga antecipadamente. É
 			reembolsável proporcionalmente ao número de dias restantes até o
 			término da licensa.</p>
+		<p>O licenciamento pode ser cancelado pelo cliente ou pelo desenvolvedor 
+			com aviso prévio de 48h, com direito a reembolso como especificado 
+			acima.</p>
+		<p>Instalações que não estiverem em dia com o pagamento do licenciamento  
+			terão suas funcionalidades bloqueadas automaticamente.</p>
 
 		<h3>Das Atualizações de Software</h3>
 		<p>Está incluída na mensalidade a correção de bugs reportados e

@@ -37,7 +37,7 @@
 			correção de bugs e atualização de versões. Taxas do servidor
 			AppEngine acima da quota gratuita são de responsabilidade do cliente.</p>
 		<p>
-			Sujeito aos <a href="terms.jsp">Termos e Condições</a>.
+			Sujeito aos <a href="terms">Termos e Condições</a>.
 		</p>
 	</jsp:body>
 
