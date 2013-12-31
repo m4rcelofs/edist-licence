@@ -1,0 +1,165 @@
+http://cloc.sourceforge.net v 1.56  T=1.0 s (146.0 files/s, 14296.0 lines/s)
+-----------------------------------------------------------------------------------------------------------------------------------------
+File                                                                                                  blank        comment           code
+-----------------------------------------------------------------------------------------------------------------------------------------
+edist\eDist\src-test\com\erep\dist\erep\parser\donateItems.html                                         176             32           1218
+edist\eDist\src\com\erep\dist\DataAccessObject.java                                                     123              0            665
+edist\eDist\src\com\erep\dist\CloseablePM.java                                                          105              0            354
+edist\eDist\war\WEB-INF\web.xml                                                                          77             24            343
+edist\eDist\war\management\players.js                                                                    51              2            275
+edist\eDist\src\com\erep\dist\data\Player.java                                                           74              4            253
+edist\eDist\src\com\erep\dist\dwr\ReportService.java                                                     75              1            235
+edist\eDist\src\com\erep\dist\data\Request.java                                                          63              3            210
+edist\eDist\src\com\erep\dist\dwr\ManagementService.java                                                 64              2            189
+edist\eDist\war\WEB-INF\templates\employer_template.user.js                                              42             19            182
+edist\eDist\src\com\erep\dist\RequestsHelper.java                                                        44              2            164
+edist\eDist\src\com\erep\dist\erep\ErepScrapper.java                                                     42              1            163
+edist\eDist\src\com\erep\dist\data\DailyStats.java                                                       47              5            154
+edist\eDist\src-test\com\erep\dist\erep\dist\FoodStrategyTest.java                                       85              0            151
+edist\eDist\war\request\index.jsp                                                                         4              0            144
+edist\eDist\war\request\form.js                                                                          30              0            143
+edist\eDist\war\reports\requests.js                                                                      27              0            135
+edist\eDist\war\players\fights.js                                                                        25              0            135
+edist\eDist\src\com\erep\dist\dwr\PlayerReportService.java                                               39              0            133
+edist\eDist\src\com\erep\dist\instances\frontend\tasks\SendResourceTask.java                             25              1            125
+edist\eDist\src\com\erep\dist\instances\frontend\EmployerFacadeServlet.java                              28              1            117
+edist\eDist\src\com\erep\dist\dwr\RequestService.java                                                    31              2            116
+edist\eDist\src\com\erep\dist\auth\LicensingHelper.java                                                  26              3            116
+edist\eDist\src\com\erep\dist\data\DailyWork.java                                                        33              8            113
+edist\eDist\src\com\erep\dist\data\ServerConfig.java                                                     37              0            111
+edist\eDist\war\reports\work.js                                                                          22              0            107
+edist\eDist\src\com\erep\dist\instances\frontend\JavascriptGenerationServlet.java                        25              0            104
+edist\eDist\src\com\erep\dist\data\DailyFights.java                                                      33              6            104
+edist\eDist\src\com\erep\dist\instances\frontend\install\InstallHelper.java                              20              0            102
+edist\eDist\src\com\erep\dist\dwr\AdminService.java                                                      20              1            101
+edist\eDist\war\management\groups.js                                                                     17              1            100
+edist\eDist\src-test\ManagementServiceTest.html                                                          11              0            100
+edist\eDist\src\com\erep\dist\erep\RankCalculator.java                                                   10              0             98
+edist\eDist\war\players\history.js                                                                       22              0             98
+edist\eDist\src\com\erep\dist\instances\backend\tasks\AvatarFetchTask.java                               28              0             96
+edist\eDist\src\com\erep\dist\data\DistConfig.java                                                       28              3             93
+edist\eDist\src\com\erep\dist\auth\AssymetricCipherUtils.java                                            22              0             93
+edist\eDist\src\com\erep\dist\instances\frontend\install\InstallServlet.java                             21              0             92
+edist\eDist\src\com\erep\dist\data\Distributor.java                                                      28              0             92
+edist\eDist\src\com\erep\dist\instances\backend\tasks\PlayerStatsTask.java                               29              0             92
+edist\eDist\src-test\AdminServiceTest.html                                                               15              0             89
+edist\eDist\src\com\erep\dist\data\PlayerGroup.java                                                      27              1             88
+edist\eDist\src\com\erep\dist\auth\SymmetricCipherUtils.java                                             28              0             86
+edist\eDist\war\players\ranks.js                                                                          5              0             84
+edist\eDist\src\com\erep\dist\instances\backend\tasks\CalculateDailyFightsTask.java                      26              1             82
+edist\eDist\src\com\erep\dist\instances\frontend\tasks\NotifyEmailChangeTask.java                        24              0             81
+edist\eDist\src\com\erep\dist\data\Employer.java                                                         27              0             79
+edist\eDist\war\admin\mods.js                                                                            12              0             77
+edist\eDist\war\WEB-INF\datastore-indexes.xml                                                            17              0             74
+edist\eDist\src\com\erep\dist\cache\CacheFacade.java                                                     18             12             71
+edist\eDist\src\com\erep\dist\auth\AuthHelper.java                                                       15              0             71
+edist\eDist\src\com\erep\dist\data\RegisteredUser.java                                                   24              0             70
+edist\eDist\src-test\ReportServiceTest.html                                                              11              0             66
+edist\eDist\src\com\erep\dist\erep\dist\ManufacturedStrategy.java                                        19              0             66
+edist\eDist\src\com\erep\dist\instances\frontend\tasks\GetUserInfoTask.java                              20              0             66
+edist\eDist\src\com\erep\dist\data\ResourceDist.java                                                     22              0             64
+edist\eDist\src\com\erep\dist\instances\frontend\AutoDistJob.java                                        16              0             63
+edist\eDist\src\com\erep\dist\dwr\dto\RequestAttempt.java                                                22              0             59
+edist\eDist\src\com\erep\dist\erep\dist\FoodStrategy.java                                                17              0             59
+edist\eDist\src\com\erep\dist\data\WorkVerification.java                                                 21              0             58
+edist\eDist\src\com\erep\dist\data\FightVerification.java                                                20              0             58
+edist\eDist\src\com\erep\dist\instances\backend\tasks\WorkVerificationTask.java                          17              0             57
+edist\eDist\src\com\erep\dist\data\InstallLog.java                                                       20              0             57
+edist\eDist\war\admin\dists.js                                                                           10              0             57
+edist\eDist\war\admin\employers.js                                                                        8              0             55
+edist\eDist\src\com\erep\dist\instances\backend\PlayerStatsStarterJob.java                               13              0             54
+edist\eDist\war\reports\reports.js                                                                       13              2             53
+edist\eDist\src\com\erep\dist\ConfigHelper.java                                                          10              6             53
+edist\eDist\src\com\erep\dist\instances\backend\tasks\AvatarUploadCallbackServlet.java                   15              0             50
+edist\eDist\src-test\RequestServiceTest.html                                                             10              0             49
+edist\eDist\src\com\erep\dist\instances\backend\tasks\FightsVerificationTask.java                        14              0             49
+edist\eDist\war\players\players.js                                                                       13              2             49
+edist\eDist\war\distconfig\dist-config.js                                                                 9              0             49
+edist\eDist\war\admin\config.js                                                                          10              0             47
+edist\eDist\src\com\erep\dist\Mailer.java                                                                14              4             47
+edist\eDist\src\com\erep\dist\erep\parser\CitizenParser.java                                             18              0             45
+edist\eDist\src\com\erep\dist\auth\PlayerReportsFilter.java                                              11              0             44
+edist\eDist\war\admin\admin.js                                                                           12              0             44
+edist\eDist\src\com\erep\dist\auth\ModeratorsFilter.java                                                 11              0             44
+edist\eDist\src\com\erep\dist\auth\ReportsFilter.java                                                    11              0             44
+edist\eDist\src\com\erep\dist\erep\eRepTimeCalculator.java                                               13              0             43
+edist\eDist\war\management\management.js                                                                 12              0             41
+edist\eDist\src\com\erep\dist\data\Avatar.java                                                           14              3             41
+edist\eDist\src\com\erep\dist\PlayerIdentificator.java                                                   12              1             39
+edist\eDist\src\com\erep\dist\instances\backend\LicensingJob.java                                        13              0             36
+edist\eDist\src-test\com\erep\dist\erep\HitCalculatorTest.java                                            9              0             36
+edist\eDist\src\com\erep\dist\cache\CacheAspect.java                                                     11             12             36
+edist\eDist\src\com\erep\dist\dwr\dto\FiltersInitialInfo.java                                            14              0             35
+edist\eDist\src\com\erep\dist\data\PlayerGroupRoot.java                                                  13              6             35
+edist\eDist\src\com\erep\dist\data\DistributorRoot.java                                                  13              6             35
+edist\eDist\src-test\com\erep\dist\erep\parser\DonateItemsParserTest.java                                14              1             35
+edist\eDist\src\com\erep\dist\dwr\dto\PlayerQuery.java                                                   13              0             34
+edist\eDist\src\com\erep\dist\data\PlayerRoot.java                                                       12              6             33
+edist\eDist\src\com\erep\dist\data\EmployerRoot.java                                                     12              6             33
+edist\eDist\src\com\erep\dist\erep\parser\DonateItemsParser.java                                         10              6             30
+edist\eDist\war\distconfig\fight-verification.js                                                          6              0             28
+edist\eDist\src-test\com\erep\dist\erep\parser\CitizenParserTest.java                                    10              0             28
+edist\eDist\war\distconfig\work-verification.js                                                           7              0             28
+edist\eDist\src\com\erep\dist\erep\dist\WeaponStrategy.java                                              12              0             27
+edist\eDist\src\com\erep\dist\data\Licence.java                                                          10              0             26
+edist\eDist\src\com\erep\dist\erep\eRepURL.java                                                           6              0             26
+edist\eDist\war\admin\index.jsp                                                                           5              0             26
+edist\eDist\src\com\erep\dist\dwr\dto\WorkQuery.java                                                     10              0             25
+edist\eDist\src\com\erep\dist\dwr\dto\RequestQuery.java                                                  11              0             25
+edist\eDist\war\management\index.jsp                                                                      6              0             25
+edist\eDist\src\com\erep\dist\dwr\dto\StatsQuery.java                                                    10              0             25
+edist\eDist\src\com\erep\dist\dwr\dto\RegisteredUserQuery.java                                           11              0             25
+edist\eDist\src\com\erep\dist\dwr\dto\PlayerGroupQuery.java                                              11              0             25
+edist\eDist\src\com\erep\dist\dwr\dto\FightsQuery.java                                                   10              0             24
+edist\eDist\war\WEB-INF\queue.xml                                                                         0              0             24
+edist\eDist\war\players\index.jsp                                                                         6              0             23
+edist\eDist\war\WEB-INF\cron.xml                                                                          4              2             23
+edist\eDist\src\com\erep\dist\data\enums\ResourceQuality.java                                             6              0             23
+edist\eDist\war\reports\index.jsp                                                                         6              0             23
+edist\eDist\war\WEB-INF\appengine-web.xml                                                                 5              2             20
+edist\eDist\src\com\erep\dist\instances\frontend\ServletHelper.java                                       8              0             18
+edist\eDist\src\com\erep\dist\erep\HitCalculator.java                                                     5              8             18
+edist\eDist\war\WEB-INF\templates\footer_template.js                                                      2              0             17
+edist\eDist\src\META-INF\jdoconfig.xml                                                                    4              0             16
+edist\eDist\src-test\com\erep\dist\CipherUtilsTest.java                                                  12              0             15
+edist\eDist\src\com\erep\dist\instances\backend\EmptyServlet.java                                         7              0             15
+edist\eDist\war\WEB-INF\templates\user_template.js                                                        1              0             14
+edist\eDist\src\com\erep\dist\instances\frontend\URLMapperServlet.java                                    8              0             14
+edist\eDist\src\com\erep\dist\PMF.java                                                                    5              0             14
+edist\eDist\src\com\erep\dist\data\enums\VerificationAction.java                                          5              0             14
+edist\eDist\src\META-INF\persistence.xml                                                                  1              0             14
+edist\eDist\src\com\erep\dist\data\enums\ResourceType.java                                                5              0             13
+edist\eDist\src\com\erep\dist\data\enums\RocketQuality.java                                               4              0             12
+edist\eDist\src\com\erep\dist\data\enums\PlayerDistStatus.java                                            4              0             12
+edist\eDist\war\WEB-INF\backends.xml                                                                      0              0             11
+edist\eDist\war\WEB-INF\templates\header_template.js                                                      2              0             11
+edist\eDist\war\index.jsp                                                                                 4              0             11
+edist\eDist\src\com\erep\dist\ServerConstants.java                                                        7              0             11
+edist\eDist\src\com\erep\dist\erep\dist\InventoryValidationException.java                                 4              0             10
+edist\eDist\src\com\erep\dist\erep\dist\ResourcesSendingException.java                                    4              0             10
+edist\eDist\src\com\erep\dist\cache\Cacheable.java                                                        3             11              9
+edist\eDist\src\com\erep\dist\data\enums\RequestStatus.java                                               2              0              8
+edist\eDist\src\com\erep\dist\data\enums\ReportsAccessLevel.java                                          2              0              8
+edist\eDist\src\com\erep\dist\data\enums\PlayerStatus.java                                                2              0              8
+edist\eDist\src\com\erep\dist\data\enums\RequestType.java                                                 2              0              8
+edist\eDist\src\com\erep\dist\data\enums\ConfigGranularity.java                                           2              0              8
+edist\eDist\src\com\erep\dist\data\enums\ResourceDistStatus.java                                          2              0              8
+edist\eDist\src\com\erep\dist\data\enums\RegisteredUserRole.java                                          2              0              8
+edist\eDist\src\com\erep\dist\erep\ErepLoginException.java                                                4              0              7
+edist\eDist\src\com\erep\dist\data\HasEncodedKey.java                                                     4              0              5
+edist\eDist\src\com\erep\dist\erep\dist\DistStrategy.java                                                 3              0              4
+-----------------------------------------------------------------------------------------------------------------------------------------
+SUM:                                                                                                   2811            219          11266
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Java                           104           2091            133           7138
+Javascript                      23            358             26           1829
+HTML                             5            223             32           1522
+XML                              8            108             28            525
+JSP                              6             31              0            252
+-------------------------------------------------------------------------------
+SUM:                           146           2811            219          11266
+-------------------------------------------------------------------------------

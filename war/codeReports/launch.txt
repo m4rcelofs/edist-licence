@@ -1,0 +1,68 @@
+eDist - Release ao Público
+
+
+É com prazer que, na entrada deste 2014, anuncio ao público o lançamento oficial do eDist - Sistema de Gestão de Unidades Militares.
+
+Projeto em conjunto com o @Guilpas que surgiu no início de Agosto/2013, foram 4 meses de desenvolvimento intenso: Mais de [url=http://edist-licence.appspot.com/codeReports/20131230.txt]11k linhas de código[/url], em 5 versões de testes, até chegar na versão estável considerada "boa o suficiente" para ser apresentada ao público.
+
+Provavelmente alguns já saibam, mas o eDist já está em testes no Exército Brasileiro desde o início de dezembro: foi um período para a realização de diversos testes de funcionalidade, uso e capacidade, pelo qual agradeço ao @Zunker pela paciência. Quem quiser dar uma olhada, é só seguir o [url=http://dist-eb.appspot.com]link[/url].
+
+
+Funcionalidades:
+
+- [b]Distribuição automatizada[/b]
+Distribuição de suprimentos diários, rocket, parcial (formulário) ou totalmente automática (na virada do dia).
+
+- [b]Configuração simples[/b]
+Quer configurar toda a MU de uma só vez? Quer separar em grupos? Quer que cada jogador receba de um distribuidor diferente? Sem problemas. O sistema foi pensado para se adequar à sua UM, e não o contrário.
+
+- [b]Acompanhamento de jogadores[/b]
+Rastreie o crescimento de seus jogadores: status, treinos, lutas... tenha sempre em mãos as informações que você deseja.
+
+- [b]Acompanhamento de gestores[/b]
+Nunca mais gaste seu tempo precioso preenchendo planilhas de funcionários com o script de gestores. Não trabalhou ontem? [url=http://youtu.be/svSGKJFSl-8]No soup for you[/url]!
+
+- [b]Bloqueio automático de distribuição[/b]
+Diminua o desperdício na gestão bloqueando jogadores que pegam distribuição e não lutam ou que não trabalham para seus gestores.
+
+- [b]Histórico de verdade[/b]
+Quer saber quanto de força seu jogador tinha quando entrou na MU? Em qual dia ele vestiu a farda? Sem problemas. O eDist mantém um histórico de todos os stats do jogador.
+
+- [b]Plataforma confiável e gratuita[/b]
+A plataforma Google AppEngine hospeda o aplicativo em uma das nuvens mais confiáveis da atualidade. Tenha o sistema sempre disponível em uma infraestrutura rápida ao redor do mundo, e o melhor: com uma generosa quota diária gratuita, onde você paga somente o excedente utilizado! Se preferir, hospede o sistema em seu próprio VPS (sujeito a limitações).
+
+- [b]Segurança[/b]
+Um rígido controle de acesso; conexões seguras https padrão (somente no AppEngine) e criptografia AES-128 para armazenamento de dados sensíveis.
+
+- [b]Personalizável[/b]
+Desenvolvido com base no Boostrap 3, o eDist é facilmente personalizável com o tema da sua Unidade Militar.
+
+- [b]Constante desenvolvimento[/b]
+Encontrou um bug? Quer uma funcionalidade nova? Não gostou de algo? Sem problemas. O desenvolvimento é constante e a atualização de versões é gratuita.
+
+
+
+Quem quiser instalar pra sua Unidade Militar, é só entrar em contato por MP aqui no fórum ou no IRC (canal #eDist, Rizon). Não responderei questionamentos ingame sobre o assunto (:
+
+É importante, também, que leiam com atenção os [url=http://edist-licence.appspot.com/terms]Termos e Condições[/url].
+
+Lista aleatória de commanders e/ou pessoas que podem se interessar:
+[spoiler]
+@BIGGIL
+@Gislaine
+@SirStark
+@Claudio Torch
+@Sucrilhos
+@SpellCat
+@Gulitiwi
+@Sidinelson Felipe
+@FAbrahim
+@Lazzarisouza
+@ArkantosCAT
+@SabakanoGaara
+@CristianScarface
+@Wakko
+@Rei Vermelho
+@Danilo.T
+@Drober
+[/spoiler]
