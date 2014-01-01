@@ -10,14 +10,22 @@
 		<h2>Changelog</h2>
 		
 		<p>
+			<strong>2014-01-XX v0.7</strong> <small>(not released)</small>
+		</p>
+		<ul>
+			<li>Bug fix: cache invalidation on adding new groups <small>(thanks @Sucrilhos)</small></li>
+			<li>Bug fix: initial player stats fetching to avoid requests with no details <small>(thanks @Sucrilhos)</small></li>
+		</ul>
+		
+		<p>
 			<strong>2013-12-31 v0.6</strong>
 		</p>
 		<ul>
 			<li>Enabled aggresive caching of static files</li>
 			<li>Enabled memcache</li>
-			<li>Case insensitive player search</li>
+			<li>Case insensitive player search <small>(thanks @Sir Stark)</small></li>
 			<li>Small UI improvements</li>
-			<li>Bug Fix: Employer userscript</li>
+			<li>Bug Fix: Employer userscript <small>(thanks @Zunker)</small></li>
 		</ul>
 			
 		
