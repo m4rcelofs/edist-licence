@@ -10,7 +10,7 @@
 		<h2>Changelog</h2>
 		
 		<p>
-			<strong>201X-XX-XX v0.6</strong> <small>not released yet</small>
+			<strong>2013-12-31 v0.6</strong>
 		</p>
 		<ul>
 			<li>Enabled aggresive caching of static files</li>
