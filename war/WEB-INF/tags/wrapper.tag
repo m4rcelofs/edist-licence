@@ -8,8 +8,8 @@
 <%
 	// 1 week
 	// https://groups.google.com/forum/#!topic/google-appengine/6xAV2Q5x8AU
-	response.setDateHeader("Expires", new Date().getTime() + 604800000L);
-	response.setHeader("Cache-Control", "public, max-age=604800000");
+	response.setDateHeader("Expires", new Date().getTime() + 172800L);
+	response.setHeader("Cache-Control", "public, max-age=172800");
 	response.setHeader("Pragma", "Public");
 %>
 
