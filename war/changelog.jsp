@@ -10,14 +10,24 @@
 		<h2>Changelog</h2>
 		
 		<p>
+			<strong>2014-01-XX v0.8</strong> <small>(not released)</small>
+		</p>
+		<ul>
+			<li>Improved player management links <small>(thanks @Zunker)</small></li>
+			<li>Always shows distributor server access warning</li>
+			<li>Bug Fix: Request UI not showing when player is suspended <small>(thanks @PiresFelix)</small></li>
+		</ul>
+		
+		
+		<p>
 			<strong>2014-01-03 v0.7</strong>
 		</p>
 		<ul>
+			<li>Added tips to player report links <small>(thanks @Wakko)</small></li>
+			<li>CSS cleanup, moved to wider bootstrap-native container</li>
 			<li>Bug fix: cache invalidation on adding new groups <small>(thanks @Sucrilhos)</small></li>
 			<li>Bug fix: initial player stats fetching to avoid requests with no details <small>(thanks @Sucrilhos)</small></li>
 			<li>Bug fix: unique names to avoid 'tombstoned' task errors on work verification <small>(thanks @Sucrilhos)</small></li>
-			<li>Added tips to player report links <small>(thanks @Wakko)</small></li>
-			<li>CSS cleanup, moved to wider bootstrap-native container</li>
 		</ul>
 		
 		<p>

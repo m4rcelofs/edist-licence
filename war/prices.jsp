@@ -16,8 +16,8 @@
 
 
 		<ul>
-			<li>AppEngine: 10G</li>
-			<li>Servidor Próprio (JBossAS7 + CapeDwarf): 50G</li>
+			<li>AppEngine: 10G <small>(recomendado para até 200~250 usuários na cota gratuita)</small></li>
+			<li>Servidor Próprio (VPS, JBossAS7 + CapeDwarf): 50G <small>(sob consulta)</small></li>
 		</ul>
 		<p>Inclui personalização para a MU (imagens e CSS devem ser
 			fornecidos).</p>
