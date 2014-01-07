@@ -6,11 +6,16 @@
 <%@attribute name="imports" fragment="true"%>
 
 <%
-	// 1 week
-	// https://groups.google.com/forum/#!topic/google-appengine/6xAV2Q5x8AU
-	response.setDateHeader("Expires", new Date().getTime() + 172800L);
-	response.setHeader("Cache-Control", "public, max-age=172800");
-	response.setHeader("Pragma", "Public");
+// 48h
+// https://groups.google.com/forum/#!topic/google-appengine/6xAV2Q5x8AU
+response.setDateHeader("Expires", new Date().getTime() + 172800000L);
+response.setHeader("Cache-Control", "public, max-age=172800000");
+response.setHeader("Pragma", "Public");
+
+response.setHeader("X-Frame-Options", "DENY");
+response.setHeader("Strict-Transport-Security", "max-age=172800000; includeSubDomains");
+response.setHeader("X-Content-Type-Options", "nosniff");
+response.setHeader("X-XSS-Protection", "1; mode=block");
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
