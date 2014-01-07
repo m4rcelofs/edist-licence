@@ -15,7 +15,13 @@
 		<ul>
 			<li>Improved player management links <small>(thanks @Zunker)</small></li>
 			<li>Always shows distributor server access warning</li>
-			<li>Bug Fix: Request UI not showing when player is suspended <small>(thanks @PiresFelix)</small></li>
+			<li>Implemented security headers to make XSS attacks even harder</li>
+			<li>Bug Fix: request UI not showing when player is suspended <small>(thanks @PiresFelix)</small></li>
+			<li>Bug Fix: auto dist task npe</li>
+			<li>Buf Fix: adding player with no group selected</li>
+			<li>Bug Fix: removed loading states to allow button disabling after requests <small>(thanks @Sir Stark)</small></li>
+			<li>Bug Fix: day change countdown not showing</li>
+			<li>Bug Fix: employer script now clears cache when forcing update <small>(thanks @PiresFelix)</small></li>
 		</ul>
 		
 		
