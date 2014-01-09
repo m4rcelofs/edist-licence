@@ -10,12 +10,14 @@
 		<h2>Changelog</h2>
 		
 		<p>
-			<strong>2014-01-XX v0.8</strong> <small>(not released)</small>
+			<strong>2014-01-09 v0.8</strong>
 		</p>
 		<ul>
 			<li>Improved player management links <small>(thanks @Zunker)</small></li>
 			<li>Always shows distributor server access warning</li>
 			<li>Implemented security headers to make XSS attacks even harder</li>
+			<li>Employer script: added checks to avoid conflicting updates</li>
+			<li>Employer script now uses its own version of jQuery to avoid Greasemonkey's access violation error</li>
 			<li>Bug Fix: request UI not showing when player is suspended <small>(thanks @PiresFelix)</small></li>
 			<li>Bug Fix: auto dist task npe</li>
 			<li>Buf Fix: adding player with no group selected</li>
