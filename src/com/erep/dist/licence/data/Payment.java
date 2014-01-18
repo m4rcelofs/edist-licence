@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.IdentityType;
+import javax.jdo.annotations.NotPersistent;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
@@ -12,6 +13,7 @@ import org.directwebremoting.annotations.DataTransferObject;
 import org.directwebremoting.annotations.RemoteProperty;
 
 import com.google.appengine.api.datastore.Key;
+import com.google.appengine.api.datastore.KeyFactory;
 
 @DataTransferObject
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
@@ -20,6 +22,10 @@ public class Payment {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private Key			key;
+
+	@NotPersistent
+	@RemoteProperty
+	private String		encodedKey;
 
 	@Persistent
 	private Licence		licence;
@@ -126,6 +132,26 @@ public class Payment {
 
 	public void setRecordedBy(String recordedBy) {
 		this.recordedBy = recordedBy;
+	}
+
+	public String getEncodedKey() {
+		if (key != null)
+			return KeyFactory.keyToString(key);
+		return encodedKey;
+	}
+
+	public void setEncodedKey(String encodedKey) {
+		this.encodedKey = encodedKey;
+		if (encodedKey != null)
+			this.key = KeyFactory.stringToKey(encodedKey);
+	}
+
+	public Key getKey() {
+		return key;
+	}
+
+	public void setKey(Key key) {
+		this.key = key;
 	}
 
 }

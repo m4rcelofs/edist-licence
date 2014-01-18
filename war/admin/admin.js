@@ -56,14 +56,22 @@ var AdminViewModel = new function() {
 
 	self.savePayment = function() {
 		var payment = {
-			value: $('#paymentValue').val(),
-			type: $('#paymentType').val(),
-			paymentDate: $('#paymentDate').val(),
-			fromDay: $('#paymentFromDay').val(),
-			toDay: $('#paymentToDay').val(),
-			notes: $('#paymentNotes').val()
+			value : $('#paymentValue').val(),
+			type : $('#paymentType').val(),
+			paymentDate : $('#paymentDate').val(),
+			fromDay : $('#paymentFromDay').val(),
+			toDay : $('#paymentToDay').val(),
+			notes : $('#paymentNotes').val()
 		};
 		ManagementService.addPayment(self.currentLicence, payment, {
+			callback : function(response) {
+				self.loadPayments(self.currentLicence);
+			}
+		});
+	}
+
+	self.removePayment = function(payment) {
+		ManagementService.removePayment(self.currentLicence, payment, {
 			callback : function(response) {
 				self.loadPayments(self.currentLicence);
 			}

@@ -49,10 +49,21 @@ public class ManagementService {
 						licence.getAppId());
 				Set<Payment> response = original.getPayments();
 				return pm.detachCopyAll(response);
-//				return response;
 			} catch (JDOObjectNotFoundException e) {
 				return new HashSet<>();
 			}
+		}
+	}
+
+	@RemoteMethod
+	public boolean removePayment(Licence licence, Payment payment) {
+		try (CloseablePM pm = PMF.getNewPersistenceManager()) {
+			Licence dbLicence = pm.getObjectById(Licence.class,
+					licence.getAppId());
+			Payment dbPayment = pm.getObjectById(Payment.class,
+					payment.getKey());
+			dbLicence.getPayments().remove(dbPayment);
+			return true;
 		}
 	}
 

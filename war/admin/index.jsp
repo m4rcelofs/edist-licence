@@ -128,40 +128,41 @@
 											<form id="add-form" class="form-inline"
 												data-bind="submit: savePayment" role="form">
 												<fieldset>
-													<div class="form-group col-md-4">
-														<input id="paymentDate" placeholder="data"
-															class="form-control" type="number" step="1"
-															data-bind="attr: {min: eRepDay}" max="9999">
+													<div class="row">
+														<div class="form-group col-md-4">
+															<input id="paymentDate" placeholder="data"
+																	class="form-control" type="number" step="1" max="9999">
+														</div>
+														<div class="form-group col-md-4">
+															<input id="paymentValue" placeholder="valor"
+																	class="form-control" required type="number">
+														</div>
+														<div class="form-group col-md-4">
+															<select id="paymentType">
+																<option value="CC">CC</option>
+																<option value="GOLD">Gold</option>
+																<option value="WQ7">Armas Q7</option>
+															</select>
+														</div>
 													</div>
-													<div class="form-group col-md-4">
-														<input id="paymentValue" placeholder="valor"
-															class="form-control" required type="number">
+													<div class="row">
+														<div class="form-group col-md-4">
+															<input id="paymentFromDay" placeholder="início"
+																	class="form-control" type="number" step="1" max="9999">
+														</div>
+														<div class="form-group col-md-4">
+															<input id="paymentToDay" placeholder="final"
+																	class="form-control" type="number" step="1" max="9999">
+														</div>
+														<div class="form-group col-md-4">
+															<textarea id="paymentNotes" placeholder="notas"
+																	class="form-control"></textarea>
+														</div>
 													</div>
-													<div class="form-group col-md-4">
-														<select id="paymentType">
-															<option value="CC">CC</option>
-															<option value="GOLD">Gold</option>
-															<option value="WQ7">Armas Q7</option>
-														</select>
-													</div>
-													<div class="form-group"></div>
-													<div class="form-group col-md-4">
-														<input id="paymentFromDay" placeholder="início"
-															class="form-control" type="number" step="1"
-															data-bind="attr: {min: eRepDay}" max="9999" required>
-													</div>
-													<div class="form-group col-md-4">
-														<input id="paymentToDay" placeholder="final"
-															class="form-control" type="number" step="1"
-															data-bind="attr: {min: eRepDay}" max="9999" required>
-													</div>
-													<div class="form-group col-md-4">
-														<textarea id="paymentNotes" placeholder="notas"
-															class="form-control"></textarea>
-													</div>
-													<div class="form-group"></div>
-													<div class="form-group col-md-1">
-														<button type="submit" class="btn btn-primary">Salvar</button>
+													<div class="row">
+														<div class="form-group col-md-1">
+															<button type="submit" class="btn btn-primary">Salvar</button>
+														</div>
 													</div>
 												</fieldset>
 											</form>
@@ -181,11 +182,12 @@
 										<th>Tipo</th>
 										<th>Usuário</th>
 										<th>Notas</th>
+										<th></th>
 									</tr>
 								</thead>
 			
 								<tbody data-bind="foreach: payments">
-									<tr>
+									<tr data-bind="attr: {id: encodedKey}">
 										<td data-bind="text: paymentDate"></td>
 										<td data-bind="text: fromDay"></td>
 										<td data-bind="text: toDay"></td>
@@ -193,6 +195,8 @@
 										<td data-bind="text: type"></td>
 										<td data-bind="text: recordedBy"></td>
 										<td data-bind="text: notes"></td>
+										<td><a data-bind="click: $root.removePayment"><span
+												class="glyphicon glyphicon-remove"></span></a></td>
 									</tr>
 								</tbody>
 							</table>
