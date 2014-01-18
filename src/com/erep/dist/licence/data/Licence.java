@@ -1,6 +1,8 @@
 package com.erep.dist.licence.data;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
@@ -9,6 +11,7 @@ import javax.jdo.annotations.PrimaryKey;
 
 import org.directwebremoting.annotations.DataTransferObject;
 import org.directwebremoting.annotations.RemoteProperty;
+
 
 @DataTransferObject
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
@@ -38,6 +41,9 @@ public class Licence {
 	@Persistent
 	@RemoteProperty
 	private String	editedBy;
+	
+	@Persistent(mappedBy = "licence")
+	private Set<Payment>		payments;
 
 	public String getAppId() {
 		return appId;
@@ -85,6 +91,16 @@ public class Licence {
 
 	public void setContactEmail(String contactEmail) {
 		this.contactEmail = contactEmail;
+	}
+
+	public Set<Payment> getPayments() {
+		if(payments == null)
+			payments = new HashSet<>();
+		return payments;
+	}
+
+	public void setPayments(Set<Payment> payments) {
+		this.payments = payments;
 	}
 
 }

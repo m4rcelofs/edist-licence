@@ -1,8 +1,11 @@
 package com.erep.dist.licence.dwr;
 
 import java.io.IOException;
+import java.util.Collection;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,6 +20,7 @@ import com.erep.dist.Mailer;
 import com.erep.dist.PMF;
 import com.erep.dist.erep.eRepTimeCalculator;
 import com.erep.dist.licence.data.Licence;
+import com.erep.dist.licence.data.Payment;
 import com.google.appengine.api.users.UserServiceFactory;
 
 @RemoteProxy
@@ -24,6 +28,33 @@ public class ManagementService {
 
 	private static Logger	logger	= Logger.getLogger(ManagementService.class
 											.getName());
+
+	@RemoteMethod
+	public void addPayment(Licence licence, Payment payment) {
+		try (CloseablePM pm = PMF.getNewPersistenceManager()) {
+			Licence original = pm.getObjectById(Licence.class,
+					licence.getAppId());
+			payment.setRecordedAt(new Date());
+			payment.setRecordedBy(UserServiceFactory.getUserService()
+					.getCurrentUser().getEmail());
+			original.getPayments().add(payment);
+		}
+	}
+
+	@RemoteMethod
+	public Collection<Payment> listPayments(Licence licence) {
+		try (CloseablePM pm = PMF.getNewPersistenceManager()) {
+			try {
+				Licence original = pm.getObjectById(Licence.class,
+						licence.getAppId());
+				Set<Payment> response = original.getPayments();
+				return pm.detachCopyAll(response);
+//				return response;
+			} catch (JDOObjectNotFoundException e) {
+				return new HashSet<>();
+			}
+		}
+	}
 
 	@RemoteMethod
 	@SuppressWarnings("unchecked")

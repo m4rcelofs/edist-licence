@@ -1,68 +1,78 @@
-function loadLicences(sortFunction) {
-	$('#licences').hide();
-	$('#loading').show();
-	$('#licences > tbody > tr').remove();
-	ManagementService.listLicences({
-		callback : function(response) {
-			$('#validUntil').prop('min', response.eRepDay);
+$(document).ready(function() {
+	ko.applyBindings(AdminViewModel, document.getElementById('adminPage'));
+	AdminViewModel.loadLicences();
+});
 
-			response.licences.sort(sortFunction);
+var AdminViewModel = new function() {
+	var self = this;
 
-			response.licences.forEach(function(entry) {
-				var clazz = '';
-				if (entry.validUntilDay < response.eRepDay) {
-					clazz = 'danger';
-				} else if (entry.validUntilDay < (response.eRepDay + 14)) {
-					clazz = 'warning';
+	self.eRepDay = ko.observable(0);
+	self.licences = ko.observableArray([]);
+
+	self.currentLicence = null;
+	self.payments = ko.observableArray([]);
+
+	self.loadLicences = function(sortFct) {
+		self.licences([]);
+		ManagementService.listLicences({
+			callback : function(response) {
+				self.eRepDay(response.eRepDay);
+				if (sortFct) {
+					response.licences.sort(sortFct);
 				}
-
-				var row = '<tr class="' + clazz + '"><td>' + entry.appId
-						+ '</td><td>' + entry.validUntilDay + '</td><td>'
-						+ entry.userLimit + '</td><td>' + entry.contactEmail
-						+ '</td><td>' + entry.editedAt.toLocaleString()
-						+ '</td><td>' + entry.editedBy + '</td></tr>';
-
-				$('#licences').append(row);
-			});
-			$('#loading').hide();
-			$('#licences').fadeIn('slow');
-		},
-		errorHandler : errorHandlerFunction
-	});
-}
-
-function saveLicence() {
-	$('#result').hide();
-	if (!$('#add-form').valid()) {
-		$('#result').attr('src', '../img/error.cache.png');
-		$('#result').fadeIn('slow');
-		return;
+				self.licences(response.licences);
+			},
+			errorHandler : onErrorFct
+		});
 	}
 
-	$('#add-form :input').prop("disabled", true);
+	self.saveLicence = function() {
+		var licence = {
+			appId : $('#appId').val(),
+			validUntilDay : $('#validUntil').val(),
+			userLimit : $('#userLimit').val(),
+			contactEmail : $('#contactEmail').val()
+		};
 
-	var licence = {
-		appId : $('#appId').val(),
-		validUntilDay : $('#validUntil').val(),
-		userLimit : $('#userLimit').val(),
-		contactEmail : $('#contactEmail').val()
-	};
+		ManagementService.addLicence(licence, {
+			callback : function(response) {
+				self.loadLicences();
+			},
+			errorHandler : onErrorFct
+		});
+	}
 
-	ManagementService.addLicence(licence, {
-		callback : function(response) {
-			if (response) {
-				$('#result').attr('src', '../img/valid.cache.png');
-				$('#result').fadeIn('slow');
-				loadLicences();
+	self.loadPayments = function(licence) {
+		self.currentLicence = licence;
+		self.payments([]);
+		ManagementService.listPayments(licence, {
+			callback : function(response) {
+				self.payments(response);
+				console.log(response);
+				$('#paymentDetails').modal('show');
 			}
-			$('#add-form :input').prop("disabled", false);
-		},
-		errorHandler : function(message) {
-			$('#result').attr('src', '../img/error.cache.png');
-			$('#result').fadeIn('slow');
-			$('#add-form :input').prop("disabled", false);
-		}
-	});
+		});
+	}
+
+	self.savePayment = function() {
+		var payment = {
+			value: $('#paymentValue').val(),
+			type: $('#paymentType').val(),
+			paymentDate: $('#paymentDate').val(),
+			fromDay: $('#paymentFromDay').val(),
+			toDay: $('#paymentToDay').val(),
+			notes: $('#paymentNotes').val()
+		};
+		ManagementService.addPayment(self.currentLicence, payment, {
+			callback : function(response) {
+				self.loadPayments(self.currentLicence);
+			}
+		});
+	}
+
+	function onErrorFct(message) {
+		alert("Oops: " + JSON.stringify(message));
+	}
 }
 
 function sortByEdition(a, b) {
@@ -87,8 +97,4 @@ function sortById(a, b) {
 
 function sortByEditor(a, b) {
 	return a.editedBy - b.editedBy;
-}
-
-function errorHandlerFunction(message) {
-	alert("Oops: " + JSON.stringify(message));
 }

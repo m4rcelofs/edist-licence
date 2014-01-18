@@ -47,7 +47,9 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 			<param-value>
 				com.erep.dist.licence.dwr.ManagementService,
 				com.erep.dist.licence.data.Licence,
-				com.erep.dist.licence.dwr.LicencesQuery
+				com.erep.dist.licence.dwr.LicencesQuery,
+				com.erep.dist.licence.data.Payment,
+				com.erep.dist.licence.data.PaymentType
     		</param-value>
 		</init-param>
 	</servlet>
