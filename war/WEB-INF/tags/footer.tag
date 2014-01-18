@@ -1,10 +1,9 @@
 <%@tag language="java" pageEncoding="UTF-8"%>
 
 <div class="form-group"></div>
-<hr />
 <div class="footer">
 	<div class="pull-right">
-		<img src="/img/appengine-noborder-120x30.cache.gif"
+		<img src="${baseUrl}/img/appengine-noborder-120x30.cache.gif"
 			alt="Powered by Google App Engine" />
 	</div>
 	<p>
@@ -15,8 +14,8 @@
 	<p>
 		<a
 			href="https://bitbucket.org/marcelofs/edist/issues?status=new&status=open">Bugs
-			e Sugestões</a> | <a href="prices">Licenciamento</a> | <a
-			href="changelog">Changelog</a> | <a href="terms">Termos e
+			e Sugestões</a> | <a href="${baseUrl}/prices">Licenciamento</a> | <a
+			href="${baseUrl}/changelog">Changelog</a> | <a href="${baseUrl}/terms">Termos e
 			Condições</a>
 	</p>
 

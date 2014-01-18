@@ -59,6 +59,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 
 	<!-- pages -->
 	<servlet>
+		<servlet-name>adminPage</servlet-name>
+		<jsp-file>/admin/index.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>adminPage</servlet-name>
+		<url-pattern>/admin/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>changelogPage</servlet-name>
 		<jsp-file>/changelog.jsp</jsp-file>
 	</servlet>

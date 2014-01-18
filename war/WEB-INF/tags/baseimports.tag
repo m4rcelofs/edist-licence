@@ -6,7 +6,7 @@
 <link
 	href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"
 	rel="stylesheet">
-
+<link href="${baseUrl}/css/jumbotron-narrow.cache.css" rel="stylesheet">
 
 
 <script>

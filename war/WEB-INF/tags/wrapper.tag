@@ -1,3 +1,4 @@
+<%@tag import="com.erep.dist.ServletHelper"%>
 <%@tag language="java" description="Default Wrapper"
 	pageEncoding="UTF-8"%>
 
@@ -6,16 +7,20 @@
 <%@attribute name="imports" fragment="true"%>
 
 <%
-// 48h
-// https://groups.google.com/forum/#!topic/google-appengine/6xAV2Q5x8AU
-response.setDateHeader("Expires", new Date().getTime() + 172800000L);
-response.setHeader("Cache-Control", "public, max-age=172800000");
-response.setHeader("Pragma", "Public");
+	// 48h
+	// https://groups.google.com/forum/#!topic/google-appengine/6xAV2Q5x8AU
+	response.setDateHeader("Expires", new Date().getTime() + 172800000L);
+	response.setHeader("Cache-Control", "public, max-age=172800000");
+	response.setHeader("Pragma", "Public");
 
-response.setHeader("X-Frame-Options", "DENY");
-response.setHeader("Strict-Transport-Security", "max-age=172800000; includeSubDomains");
-response.setHeader("X-Content-Type-Options", "nosniff");
-response.setHeader("X-XSS-Protection", "1; mode=block");
+	response.setHeader("X-Frame-Options", "DENY");
+	response.setHeader("Strict-Transport-Security",
+			"max-age=172800000; includeSubDomains");
+	response.setHeader("X-Content-Type-Options", "nosniff");
+	response.setHeader("X-XSS-Protection", "1; mode=block");
+	
+	request.setAttribute("baseUrl",
+			new ServletHelper().getBaseUrl(request));
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -41,9 +46,9 @@ response.setHeader("X-XSS-Protection", "1; mode=block");
 
 	<div class="container">
 
-		<h1>eDist</h1>
-
-		<hr />
+		<div class="header">
+			<h3>eDist</h3>
+		</div>
 
 		<jsp:doBody />
 

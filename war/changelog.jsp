@@ -10,6 +10,16 @@
 		<h2>Changelog</h2>
 		
 		<p>
+			<strong>2014-01-XX v0.9</strong> <small>(unreleased)</small>
+		</p>
+		<ul>
+			<li>i18n scheme</li>
+			<li>English translation</li>
+			<li>Spanish translation <small>(thanks @Zebosk)</small></li>
+			<li>Issue #55: Show distributor current inventory <small>(thanks @Bonna)</small></li>
+		</ul>
+		
+		<p>
 			<strong>2014-01-09 v0.8</strong>
 		</p>
 		<ul>
@@ -20,7 +30,7 @@
 			<li>Employer script now uses its own version of jQuery to avoid Greasemonkey's access violation error</li>
 			<li>Bug Fix: request UI not showing when player is suspended <small>(thanks @PiresFelix)</small></li>
 			<li>Bug Fix: auto dist task npe</li>
-			<li>Buf Fix: adding player with no group selected</li>
+			<li>Bug Fix: adding player with no group selected</li>
 			<li>Bug Fix: removed loading states to allow button disabling after requests <small>(thanks @Sir Stark)</small></li>
 			<li>Bug Fix: day change countdown not showing</li>
 			<li>Bug Fix: employer script now clears cache when forcing update <small>(thanks @PiresFelix)</small></li>
