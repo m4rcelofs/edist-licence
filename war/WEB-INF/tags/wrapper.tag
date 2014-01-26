@@ -6,6 +6,10 @@
 
 <%@attribute name="imports" fragment="true"%>
 
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<fmt:setLocale value="${language}" />
+<fmt:setBundle basename="com.erep.dist.i18n.edist" />
+
 <%
 	// 48h
 	// https://groups.google.com/forum/#!topic/google-appengine/6xAV2Q5x8AU
@@ -46,9 +50,7 @@
 
 	<div class="container">
 
-		<div class="header">
-			<h3>eDist</h3>
-		</div>
+		<%@ include file="header.tag"%>
 
 		<jsp:doBody />
 

@@ -6,10 +6,6 @@
 
 	<jsp:attribute name="imports">
 		<script type="text/javascript"
-			src="${baseUrl}/js/jquery-1.10.2.min.cache.js"></script>
-		<script type="text/javascript"
-			src="${baseUrl}/js/bootstrap.min.cache.js"></script>
-		<script type="text/javascript"
 			src="${baseUrl}/js/jquery.validate.min.cache.js"></script>
 		<script type='text/javascript'
 			src='${baseUrl}/js/knockout.min.cache.js'></script>

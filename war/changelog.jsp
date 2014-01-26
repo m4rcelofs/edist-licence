@@ -13,10 +13,19 @@
 			<strong>2014-01-XX v0.9</strong> <small>(unreleased)</small>
 		</p>
 		<ul>
-			<li>i18n scheme</li>
-			<li>English translation</li>
 			<li>Spanish translation <small>(thanks @Zebosk)</small></li>
-			<li>Issue #55: Show distributor current inventory <small>(thanks @Bonna)</small></li>
+			<li>Rewrite on the dist algorithm to lower error %</li>
+			<li>New logo image <small>(thanks @CarlosMarighella)</small></li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/49">#49</a>: i18n scheme</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/50">#50</a>: English translation</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/55">#55</a>: Show distributor current inventory <small>(thanks @Bonna)</small></li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/56">#56</a>: Split up employer updates to avoid DeadlineExceededException</li>
+			<li>Bug Fix: avoids tombstoned task names</li>
+			<li>Bug Fix: fight verification 'none' sets status to 'OK'</li>
 		</ul>
 		
 		<p>

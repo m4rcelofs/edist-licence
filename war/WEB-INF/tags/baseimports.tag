@@ -6,7 +6,16 @@
 <link
 	href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"
 	rel="stylesheet">
+
 <link href="${baseUrl}/css/jumbotron-narrow.cache.css" rel="stylesheet">
+
+<script type="text/javascript"
+	src="${baseUrl}/js/jquery-1.10.2.min.cache.js"></script>
+<script type="text/javascript"
+	src="${baseUrl}/js/jquery.cookie.min.cache.js"></script>
+<script type='text/javascript' src='${baseUrl}/js/navigation.closure.js'></script>
+<script type="text/javascript"
+	src="${baseUrl}/js/bootstrap.min.cache.js"></script>
 
 
 <script>

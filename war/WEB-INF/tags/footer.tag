@@ -14,9 +14,7 @@
 	<p>
 		<a
 			href="https://bitbucket.org/marcelofs/edist/issues?status=new&status=open">Bugs
-			e Sugestões</a> | <a href="${baseUrl}/prices">Licenciamento</a> | <a
-			href="${baseUrl}/changelog">Changelog</a> | <a href="${baseUrl}/terms">Termos e
-			Condições</a>
+			e Sugestões</a>
 	</p>
 
 </div>

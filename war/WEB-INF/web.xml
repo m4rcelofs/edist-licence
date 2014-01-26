@@ -69,7 +69,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-name>adminPage</servlet-name>
 		<url-pattern>/admin/*</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>changelogPage</servlet-name>
 		<jsp-file>/changelog.jsp</jsp-file>
@@ -101,6 +101,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	</servlet-mapping>
 
 	<servlet>
+		<servlet-name>featuresPage</servlet-name>
+		<jsp-file>/features.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>featuresPage</servlet-name>
+		<url-pattern>/features/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
 		<servlet-name>indexPage</servlet-name>
 		<jsp-file>/index.jsp</jsp-file>
 	</servlet>
@@ -109,6 +119,17 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-name>indexPage</servlet-name>
 		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
+
+	<!-- Filters -->
+	<filter>
+		<filter-name>languageFilter</filter-name>
+		<filter-class>com.erep.dist.i18n.LanguageFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>languageFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 
 	<!-- default file -->
 	<welcome-file-list>

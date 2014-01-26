@@ -1,0 +1,1 @@
+$(document).ready(function(){var a=window.location.pathname.split("/")[1];$("#"+a).addClass("active")});var Navigation=new (function(){this.setLanguage=function(a){$.cookie("language",a,{expires:14,path:"/"});location.reload(true)}});
