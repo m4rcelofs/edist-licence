@@ -1,4 +1,7 @@
 <%@tag language="java" pageEncoding="UTF-8"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<fmt:setLocale value="${language}" />
+<fmt:setBundle basename="com.erep.dist.i18n.edist" />
 
 <div class="form-group"></div>
 <div class="footer">
@@ -9,12 +12,11 @@
 	<p>
 		eDist - &copy; 2013, <a
 			href="http://www.erepublik.com/en/citizen/profile/5313713">nW0lf</a>
-		e <a href="http://www.erepublik.com/en/citizen/profile/3885795">Guilpas</a>
+		& <a href="http://www.erepublik.com/en/citizen/profile/3885795">Guilpas</a>
 	</p>
 	<p>
 		<a
-			href="https://bitbucket.org/marcelofs/edist/issues?status=new&status=open">Bugs
-			e Sugestões</a>
+			href="https://bitbucket.org/marcelofs/edist/issues?status=new&status=open"><fmt:message key="footer.bugs"/></a>
 	</p>
 
 </div>

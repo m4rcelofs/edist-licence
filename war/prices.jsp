@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<fmt:setLocale value="${language}" />
+<fmt:setBundle basename="com.erep.dist.i18n.edist" />
 
 <t:wrapper>
 
@@ -8,36 +11,50 @@
 	</jsp:attribute>
 
 	<jsp:body>
-		<h2>Valores</h2>
+		<h2>
+			<fmt:message key="prices.values" />
+			<small><fmt:message key="prices.values.brOnly" /></small>
+		</h2>
 
 		<h3>
-			Taxa de Instalação <small>pagamento único, não reembolsável</small>
+			<fmt:message key="prices.install" /> <small><fmt:message
+					key="prices.install.small" /></small>
 		</h3>
 
 
 		<ul>
-			<li>AppEngine: 10G <small>(recomendado para até 200~250 usuários na cota gratuita)</small></li>
-			<li>Servidor Próprio (VPS, JBossAS7 + CapeDwarf): 50G <small>(sob consulta)</small></li>
+			<li><fmt:message key="prices.appengine" />: <fmt:message
+					key="prices.appengine.value" /> <small><fmt:message
+						key="prices.appengine.recommended" /></small></li>
+			<li><fmt:message key="prices.vps" />: <fmt:message
+					key="prices.vps.value" /> <small><fmt:message
+						key="prices.vps.small" /></small></li>
 		</ul>
-		<p>Inclui personalização para a MU (imagens e CSS devem ser
-			fornecidos).</p>
-
-		<h3>
-			Mensalidade <small>pagamento antecipado, reembolsável
-				proporcionalmente</small>
-		</h3>
-
-		<ul>
-			<li>Até 30 jogadores - 5g/mês</li>
-			<li>Até 70 jogadores - 10g/mês</li>
-			<li>Até 150 jogadores - 15g/mês</li>
-			<li>150+ jogadores - 20g/mês</li>
-		</ul>
-		<p>A mensalidade cobre somente a despesa com software. Inclui
-			correção de bugs e atualização de versões. Taxas do servidor
-			AppEngine acima da quota gratuita são de responsabilidade do cliente.</p>
 		<p>
-			Sujeito aos <a href="terms">Termos e Condições</a>.
+			<fmt:message key="prices.theme" />
+		</p>
+
+		<h3>
+			<fmt:message key="prices.monthly" /> <small><fmt:message
+					key="prices.monthly.small" /></small>
+		</h3>
+
+		<ul>
+			<li><fmt:message key="prices.30p" /> - <fmt:message
+					key="prices.30p.value" /></li>
+			<li><fmt:message key="prices.70p" /> - <fmt:message
+					key="prices.70p.value" /></li>
+			<li><fmt:message key="prices.150p" /> - <fmt:message
+					key="prices.150p.value" /></li>
+			<li><fmt:message key="prices.150plus" /> - <fmt:message
+					key="prices.150plus.value" /></li>
+		</ul>
+		<p>
+		<fmt:message key="prices.obs" />
+		</p>
+		<p>
+			<fmt:message key="prices.obs2" /> <a href="terms"><fmt:message
+					key="header.terms" /></a>.
 		</p>
 	</jsp:body>
 

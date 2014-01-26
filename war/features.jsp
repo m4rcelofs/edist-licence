@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<fmt:setLocale value="${language}" />
+<fmt:setBundle basename="com.erep.dist.i18n.edist" />
 
 <t:wrapper>
 
@@ -26,29 +29,44 @@
 				<div class="item active">
 					<img src="${baseUrl}/img/demo/form_gradient.png">
 					<div class="carousel-caption">
-						<h2>Distribuição Facilitada</h2> 
-						<p>Suprimentos, rockets...</p>
+						<h2>
+							<fmt:message key="features.1" />
+						</h2> 
+						<p>
+							<fmt:message key="features.2" />
+						</p>
 					</div>
 				</div>
 				<div class="item">
 					<img src="${baseUrl}/img/demo/config_gradient.png">
 					<div class="carousel-caption">
-						<h2>Configuração Simples</h2>
-						<p>O sistema se adequa à sua UM, não o contrário!</p>
+						<h2>
+							<fmt:message key="features.3" />
+						</h2>
+						<p>
+							<fmt:message key="features.4" />
+						</p>
 					</div>
 				</div>
 				<div class="item">
 					<img src="${baseUrl}/img/demo/players_gradient.png">
 					<div class="carousel-caption">
-						<h2>Acompanhamento de Jogadores</h2>
-						<p>Rastreie o crescimento de seus jogadores: status, treinos, lutas...</p>
+						<h2>
+							<fmt:message key="features.5" />
+						</h2>
+						<p>
+							<fmt:message key="features.6" />
+						</p>
 					</div>
 				</div>
 				<div class="item">
 					<img src="${baseUrl}/img/demo/mod_gradient.png">
 					<div class="carousel-caption">
-						<h2>Bloqueio por Lutas ou Trabalho</h2>
-						<p>Seus jogadores lutam pouco ou não trabalham para seus gestores? <a
+						<h2>
+							<fmt:message key="features.7" />
+						</h2>
+						<p>
+							<fmt:message key="features.8" /> <a
 								href="http://youtu.be/svSGKJFSl-8">No soup for you!</a>
 						</p>
 					</div>
@@ -56,16 +74,23 @@
 				<div class="item">
 					<img src="${baseUrl}/img/demo/bootstrap_gradient.png">
 					<div class="carousel-caption">
-						<h2>Confiável e Personalizável</h2>
-						<p>Rígido controle de acesso com https padrão (somente AppEngine) e criptografia AES-128. 
-						Desenvolvido com o Bootstrap 3, é facilmente personalizável com o tema de sua UM!</p>
+						<h2>
+							<fmt:message key="features.9" />
+						</h2>
+						<p>
+							<fmt:message key="features.10" />
+						</p>
 					</div>
 				</div>
 				<div class="item">
 					<img src="${baseUrl}/img/demo/development_gradient.png">
 					<div class="carousel-caption">
-						<h2>Desenvolvimento Constante</h2>
-						<p>Encontrou um bug? Quer uma funcionalidade? Sem problemas! O desenvolvimento é constante e a atualização é gratuita.</p>
+						<h2>
+							<fmt:message key="features.11" />
+						</h2>
+						<p>
+							<fmt:message key="features.12" />
+						</p>
 					</div>
 				</div>
 			</div>
