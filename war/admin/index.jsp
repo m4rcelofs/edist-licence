@@ -18,6 +18,41 @@
 
 	<jsp:body>
 		<div id="adminPage">
+		
+			<div class="panel-group" id="email-accordion">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<a class="accordion-toggle" data-toggle="collapse"
+							data-parent="#email-accordion" href="#email-collapse-one"><span
+							class="glyphicon glyphicon-envelope"></span> Enviar E-Mail</a>
+					</div>
+					<div id="email-collapse-one" class="panel-collapse collapse">
+						<div class="panel-body">
+							<form id="email-form"
+								data-bind="submit: sendEmail" role="form">
+								<fieldset>
+									
+									<div class="form-group col-md-6">
+										<input id="email-sbj" type="text" placeholder="assunto" class="form-control">
+									</div>
+									
+									<div class="form-group col-md-11">
+										<textarea id="email-text" placeholder="texto" class="form-control"></textarea>
+										
+									</div>
+					
+									<div class="form-group col-md-1">
+										<button type="submit" class="btn btn-primary">Enviar</button>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="form-group"></div>
+		
 			<div class="panel-group" id="add-licence-accordion">
 				<div class="panel panel-default">
 					<div class="panel-heading">
@@ -62,7 +97,7 @@
 					</div>
 				</div>
 			</div>
-			
+						
 			<div class="form-group"></div>
 	
 			<table class="table table-striped table-hover" id="licences">
@@ -127,11 +162,11 @@
 													<div class="row">
 														<div class="form-group col-md-4">
 															<input id="paymentDate" placeholder="data"
-																	class="form-control" type="number" step="1" max="9999">
+																class="form-control" type="number" step="1" max="9999">
 														</div>
 														<div class="form-group col-md-4">
 															<input id="paymentValue" placeholder="valor"
-																	class="form-control" required type="number">
+																class="form-control" required type="number">
 														</div>
 														<div class="form-group col-md-4">
 															<select id="paymentType">
@@ -144,15 +179,15 @@
 													<div class="row">
 														<div class="form-group col-md-4">
 															<input id="paymentFromDay" placeholder="início"
-																	class="form-control" type="number" step="1" max="9999">
+																class="form-control" type="number" step="1" max="9999">
 														</div>
 														<div class="form-group col-md-4">
 															<input id="paymentToDay" placeholder="final"
-																	class="form-control" type="number" step="1" max="9999">
+																class="form-control" type="number" step="1" max="9999">
 														</div>
 														<div class="form-group col-md-4">
 															<textarea id="paymentNotes" placeholder="notas"
-																	class="form-control"></textarea>
+																class="form-control"></textarea>
 														</div>
 													</div>
 													<div class="row">

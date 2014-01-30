@@ -51,6 +51,8 @@ public class Mailer {
 			msg.setContent(message, "text/html");
 
 			for (MailAddress email : emails) {
+				if (email == null)
+					continue;
 				if (email.name == null || email.name.isEmpty())
 					msg.addRecipient(Message.RecipientType.TO,
 							new InternetAddress(email.address));

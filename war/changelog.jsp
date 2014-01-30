@@ -10,20 +10,37 @@
 		<h2>Changelog</h2>
 		
 		<p>
-			<strong>2014-01-XX v0.9</strong> <small>(unreleased)</small>
+			<strong>2014-01-29 v0.9</strong>
 		</p>
 		<ul>
 			<li>Spanish translation <small>(thanks @Zebosk)</small></li>
-			<li>Rewrite on the dist algorithm to lower error %</li>
 			<li>New logo image <small>(thanks @CarlosMarighella)</small></li>
+			<li>'Keep avatar history' is now a hidden option (defaults to true)</li>
+			<li>'Show distributor inventory' is now a hidden option (defaults to true)</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/42">#42</a>: Rewrite on the dist algorithm to lower error %</li>
 			<li>Issue <a
 				href="https://bitbucket.org/marcelofs/edist/issue/49">#49</a>: i18n scheme</li>
 			<li>Issue <a
 				href="https://bitbucket.org/marcelofs/edist/issue/50">#50</a>: English translation</li>
 			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/53">#53</a>: Smaller player list</li>
+			<li>Issue <a
 				href="https://bitbucket.org/marcelofs/edist/issue/55">#55</a>: Show distributor current inventory <small>(thanks @Bonna)</small></li>
 			<li>Issue <a
 				href="https://bitbucket.org/marcelofs/edist/issue/56">#56</a>: Split up employer updates to avoid DeadlineExceededException</li>
+			<li> Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/56/">#56</a>: Removed dupes check on employer script, let the server do it</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/58">#58</a>: Players List: History Tab improvements</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/59">#59</a>: moved 'fights' tab to /reports</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/61">#61</a>: Smaller dist list</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/63">#63</a>: Smaller fights list</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/65">#65</a>: Player parser gets 'eRepublik Ambassator' with the nick</li>
 			<li>Bug Fix: avoids tombstoned task names</li>
 			<li>Bug Fix: fight verification 'none' sets status to 'OK'</li>
 		</ul>

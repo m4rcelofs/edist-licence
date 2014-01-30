@@ -18,6 +18,7 @@ import org.directwebremoting.annotations.RemoteProxy;
 import com.erep.dist.CloseablePM;
 import com.erep.dist.Mailer;
 import com.erep.dist.PMF;
+import com.erep.dist.Mailer.MailAddress;
 import com.erep.dist.erep.eRepTimeCalculator;
 import com.erep.dist.licence.data.Licence;
 import com.erep.dist.licence.data.Payment;
@@ -28,6 +29,43 @@ public class ManagementService {
 
 	private static Logger	logger	= Logger.getLogger(ManagementService.class
 											.getName());
+
+	@RemoteMethod
+	@SuppressWarnings("unchecked")
+	public boolean sendMessage(String subject, String text) {
+
+		text = "<p>" + text + "</p>";
+		text = "<img src=\"https://edist-licence.appspot.com/img/logo/logo2_small_opt.cache.png\">"
+				+ text;
+		text = text.replace("\n", "<br />");
+
+		text += "<hr><p><small>";
+		text += "Essa é uma mensagem automática, por favor não responder. / ";
+		text += "This is an automated message, please do not reply.<br/>";
+		text += "Entre em contato no #eDist! / Contact us on #eDist!";
+		text += "</small></p>";
+
+		try (CloseablePM pm = PMF.getNewPersistenceManager()) {
+			Mailer mailer = new Mailer();
+			List<Licence> licences = (List<Licence>) pm.newQuery(Licence.class)
+					.execute();
+
+			MailAddress[] emails = new MailAddress[licences.size() + 1];
+
+			emails[0] = mailer.new MailAddress("admins");
+			int i = 1;
+			for (Licence licence : licences) {
+				emails[i] = mailer.new MailAddress(licence.getContactEmail());
+				i++;
+			}
+
+			mailer.mail(subject, text, emails);
+			return true;
+		} catch (IOException e) {
+			logger.log(Level.SEVERE, e.getMessage(), e);
+		}
+		return false;
+	}
 
 	@RemoteMethod
 	public void addPayment(Licence licence, Payment payment) {

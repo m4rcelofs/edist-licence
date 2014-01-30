@@ -78,6 +78,18 @@ var AdminViewModel = new function() {
 		});
 	}
 
+	self.sendEmail = function() {
+		ManagementService.sendMessage($('#email-sbj').val(), $('#email-text')
+				.val(),
+				{
+					callback : function(response) {
+						$('#email-form').addClass(
+								response ? 'has-success' : 'has-error');
+						$('#email-form')[0].reset();
+					}
+				});
+	}
+
 	function onErrorFct(message) {
 		alert("Oops: " + JSON.stringify(message));
 	}

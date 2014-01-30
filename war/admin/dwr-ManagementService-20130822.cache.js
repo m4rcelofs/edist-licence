@@ -6,14 +6,20 @@ if (DWREngine == null) var DWREngine = dwr.engine;
 
 if (ManagementService == null) var ManagementService = {};
 ManagementService._path = '/admin/dwr';
-ManagementService.listLicences = function(callback) {
-  dwr.engine._execute(ManagementService._path, 'ManagementService', 'listLicences', callback);
+ManagementService.removePayment = function(p0, p1, callback) {
+  dwr.engine._execute(ManagementService._path, 'ManagementService', 'removePayment', p0, p1, callback);
+}
+ManagementService.sendMessage = function(p0, p1, callback) {
+  dwr.engine._execute(ManagementService._path, 'ManagementService', 'sendMessage', p0, p1, callback);
+}
+ManagementService.addPayment = function(p0, p1, callback) {
+  dwr.engine._execute(ManagementService._path, 'ManagementService', 'addPayment', p0, p1, callback);
 }
 ManagementService.addLicence = function(p0, callback) {
   dwr.engine._execute(ManagementService._path, 'ManagementService', 'addLicence', p0, callback);
 }
-ManagementService.addPayment = function(p0, p1, callback) {
-  dwr.engine._execute(ManagementService._path, 'ManagementService', 'addPayment', p0, p1, callback);
+ManagementService.listLicences = function(callback) {
+  dwr.engine._execute(ManagementService._path, 'ManagementService', 'listLicences', callback);
 }
 ManagementService.listPayments = function(p0, callback) {
   dwr.engine._execute(ManagementService._path, 'ManagementService', 'listPayments', p0, callback);
