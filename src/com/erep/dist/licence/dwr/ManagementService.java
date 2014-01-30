@@ -50,16 +50,11 @@ public class ManagementService {
 			List<Licence> licences = (List<Licence>) pm.newQuery(Licence.class)
 					.execute();
 
-			MailAddress[] emails = new MailAddress[licences.size() + 1];
-
-			emails[0] = mailer.new MailAddress("admins");
-			int i = 1;
+			mailer.mail(subject, text, mailer.new MailAddress("admins"));
 			for (Licence licence : licences) {
-				emails[i] = mailer.new MailAddress(licence.getContactEmail());
-				i++;
+				mailer.mail(subject, text,
+						mailer.new MailAddress(licence.getContactEmail()));
 			}
-
-			mailer.mail(subject, text, emails);
 			return true;
 		} catch (IOException e) {
 			logger.log(Level.SEVERE, e.getMessage(), e);

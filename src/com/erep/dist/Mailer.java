@@ -59,8 +59,8 @@ public class Mailer {
 				else
 					msg.addRecipient(Message.RecipientType.TO,
 							new InternetAddress(email.address, email.name));
-				send(msg);
 			}
+			send(msg);
 		} catch (Exception e) {
 			throw new IOException(e);
 		}
