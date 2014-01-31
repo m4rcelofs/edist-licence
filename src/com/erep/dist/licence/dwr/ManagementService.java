@@ -6,6 +6,8 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -81,7 +83,8 @@ public class ManagementService {
 				Licence original = pm.getObjectById(Licence.class,
 						licence.getAppId());
 				Set<Payment> response = original.getPayments();
-				return pm.detachCopyAll(response);
+
+				return new TreeSet<>(pm.detachCopyAll(response));
 			} catch (JDOObjectNotFoundException e) {
 				return new HashSet<>();
 			}

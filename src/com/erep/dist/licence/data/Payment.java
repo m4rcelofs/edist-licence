@@ -17,7 +17,7 @@ import com.google.appengine.api.datastore.KeyFactory;
 
 @DataTransferObject
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
-public class Payment {
+public class Payment implements Comparable<Payment> {
 
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
@@ -154,4 +154,15 @@ public class Payment {
 		this.key = key;
 	}
 
+	@Override
+	public int compareTo(Payment o) {
+		if (getPaymentDate() != null && o != null && o.getPaymentDate() != null
+				&& getToDay() != null && o.getToDay() != null)
+			if (getPaymentDate().equals(o.getPaymentDate()))
+				return getToDay().compareTo(o.getToDay());
+			else
+				return getPaymentDate().compareTo(o.getPaymentDate());
+
+		return -1;
+	}
 }
