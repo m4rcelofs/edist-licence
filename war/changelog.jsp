@@ -8,6 +8,41 @@
 
 	<jsp:body>
 		<h2>Changelog</h2>
+
+		<p>
+			<strong>2014-02-15 v0.10</strong>
+		</p>
+		<ul>
+			<li>Employers script now accepts multiple player accounts per user <small>(thanks @Guilpas)</small></li>
+			<li>Improved client side caching on employers script</li>
+			<li>Changed avatar resize to onClick instead of onMouseOver <small>(thanks @SpellCat)</small></li>
+			<li>Removed white borders from avatars <small>(thanks @SpellCat)</small></li>
+			<li>Pressing 'c' while forcing an update will now clear the auth key on the employer's script <small>(thanks @Guilpas)</small></li>
+			<li>Better form images <small>(thanks @Bellenus)</small></li>
+			<li>Updated to Bootstrap 3.1.0 and jQuery 1.11.0</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/40">#40</a>:Distributor cannot send resources to itself</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/52">#52</a>: Better work reports</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/62">#62</a>: Smaller work list</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/69">#69</a>:Rename 'granularity'</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/70">#70</a>: Employers - add employee count</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/72">#72</a>: Wrapper: add a 'noscript' tag</li>	
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/73">#73</a>:	istributors: add a warning about simultaneous logins</li>		
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/75">#75</a>: Add 'current employer' field on management</li>
+			<li>Bug Fix: saving work would fail if there was no player status for the date <small>(thanks @Guilpas)</small></li> 
+			<li>Bug Fix: not being able to select player's rocket factory level <small>(thanks @Bonna)</small></li>
+			<li>Bug Fix: moved task creation outside of the transaction to avoid limits on rocket requests <small>(thanks @Bonna)</small></li>
+			<li>Bug Fix: work verification status would sometimes be overwritten</li>
+			<li>Bug Fix: report links would appear even user didn't have access to them</li>
+		</ul>
+		
 		
 		<p>
 			<strong>2014-01-29 v0.9</strong>
