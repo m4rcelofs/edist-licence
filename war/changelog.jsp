@@ -10,6 +10,19 @@
 		<h2>Changelog</h2>
 
 		<p>
+			<strong>2014-02-19 v0.11</strong>
+		</p>
+		<ul>
+			<li>Improved detection of failed supplies <small>(thanks @Guilpas and @junecaz)</small></li>
+			<li>Added a CAPTCHA check to fail early if distributor is not Bronze+ <small>(thanks @Guilpas)</small></li>
+			<li>Disabled auto dist while issue #54 is not fixed</li>
+			<li>Bug Fix: properly saves player if employer is null</li>
+			<li>Bug Fix: Properly save player employer on /management/ <small>(thanks @Guilpas)</small></li>
+			<li>Bug Fix: Fixed CSS for email input on /admin/config</li>
+		</ul>
+		
+		
+		<p>
 			<strong>2014-02-15 v0.10</strong>
 		</p>
 		<ul>
