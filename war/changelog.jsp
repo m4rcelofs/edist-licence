@@ -10,6 +10,23 @@
 		<h2>Changelog</h2>
 
 		<p>
+			<strong>2014-02-22 v0.12</strong>
+		</p>
+		<ul>
+			<li>Added "licence expired" warning to homepage</li>
+			<li>Added lastUpdatedAt text on employer's /reports/ select </li>
+			<li>Added groups/player count to /management/</li>
+			<li>Added player refresh server to transition player count</li>
+			<li>Added parsing of player citizenship, MU and ban/dead status</li>
+			<li>Automatically disables dead or permabanned players</li>
+			<li>Hides header text on phones to get it out of the way</li>
+			<li>Improved player links on reports</li> 
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/64">#64</a>: Max Hit is not calculated when first adding a player</li>
+			<li>Bug Fix: Employer's auth key leak</li>
+		</ul>
+
+		<p>
 			<strong>2014-02-19 v0.11</strong>
 		</p>
 		<ul>
