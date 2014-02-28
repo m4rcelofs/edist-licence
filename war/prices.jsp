@@ -23,17 +23,11 @@
 
 
 		<ul>
-			<li><fmt:message key="prices.appengine" />: <fmt:message
-					key="prices.appengine.value" /> <small><fmt:message
-						key="prices.appengine.recommended" /></small></li>
-			<li><fmt:message key="prices.vps" />: <fmt:message
-					key="prices.vps.value" /> <small><fmt:message
-						key="prices.vps.small" /></small></li>
+			<li><fmt:message key="prices.appengine.value" /></li>
 		</ul>
 		<p>
 			<fmt:message key="prices.theme" />
 		</p>
-
 		<h3>
 			<fmt:message key="prices.monthly" /> <small><fmt:message
 					key="prices.monthly.small" /></small>
@@ -50,8 +44,12 @@
 					key="prices.150plus.value" /></li>
 		</ul>
 		<p>
-		<fmt:message key="prices.obs" />
+			<fmt:message key="prices.obs" />
 		</p>
+		<p>
+			<fmt:message key="prices.appengine.recommended" />
+		</p>
+		
 		<p>
 			<fmt:message key="prices.obs2" /> <a href="terms"><fmt:message
 					key="header.terms" /></a>.

@@ -10,6 +10,14 @@
 		<h2>Changelog</h2>
 
 		<p>
+			<strong>2014-0X-XX v0.13</strong>
+		</p>
+		<ul>
+			<li>Records player division</li>
+			<li>Bug Fix: properly check employer's auth key</li>
+		</ul>
+			
+		<p>
 			<strong>2014-02-22 v0.12</strong>
 		</p>
 		<ul>
@@ -32,7 +40,8 @@
 		<ul>
 			<li>Improved detection of failed supplies <small>(thanks @Guilpas and @junecaz)</small></li>
 			<li>Added a CAPTCHA check to fail early if distributor is not Bronze+ <small>(thanks @Guilpas)</small></li>
-			<li>Disabled auto dist while issue #54 is not fixed</li>
+			<li>Disabled auto dist while issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/54">#54</a> is not fixed</li>
 			<li>Bug Fix: properly saves player if employer is null</li>
 			<li>Bug Fix: Properly save player employer on /management/ <small>(thanks @Guilpas)</small></li>
 			<li>Bug Fix: Fixed CSS for email input on /admin/config</li>
