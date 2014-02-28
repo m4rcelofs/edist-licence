@@ -33,10 +33,10 @@ public class EmailNotificationJob extends HttpServlet {
 			Mailer mailer = new Mailer();
 			List<Licence> all = (List<Licence>) pm.newQuery(Licence.class)
 					.execute();
-			Integer limit = geteRepDay() + 3;
 
 			for (Licence licence : all) {
-				if (licence.getValidUntilDay() <= limit
+				int daysLeft = licence.getValidUntilDay() - geteRepDay();
+				if (daysLeft <= 3 && daysLeft >= -3
 						&& licence.getContactEmail() != null
 						&& !licence.getContactEmail().isEmpty()) {
 					String subject = "eDist - Licence for "
