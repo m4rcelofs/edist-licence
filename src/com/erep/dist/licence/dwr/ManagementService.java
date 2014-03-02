@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -20,7 +19,6 @@ import org.directwebremoting.annotations.RemoteProxy;
 import com.erep.dist.CloseablePM;
 import com.erep.dist.Mailer;
 import com.erep.dist.PMF;
-import com.erep.dist.Mailer.MailAddress;
 import com.erep.dist.erep.eRepTimeCalculator;
 import com.erep.dist.licence.data.Licence;
 import com.erep.dist.licence.data.Payment;
@@ -204,8 +202,9 @@ public class ManagementService {
 					.append(".<br />This is an automated message. Please do not reply directly to this address "
 							+ "as your message will not be received.</small></p>");
 
-			mailer.mail(subject, message.toString(), mailer.new MailAddress(
-					licence.getContactEmail()),
+			mailer.mail(subject, message.toString(),
+					mailer.new MailAddress(licence.getContactEmail()));
+			mailer.mail(subject, message.toString(),
 					mailer.new MailAddress("admins"));
 
 		}

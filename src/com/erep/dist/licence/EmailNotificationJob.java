@@ -68,8 +68,10 @@ public class EmailNotificationJob extends HttpServlet {
 									+ "as your message will not be received.</small></p>");
 
 					mailer.mail(subject, message.toString(),
-							mailer.new MailAddress(licence.getContactEmail()),
+							mailer.new MailAddress(licence.getContactEmail()));
+					mailer.mail(subject, message.toString(),
 							mailer.new MailAddress("admins"));
+
 				}
 
 			}

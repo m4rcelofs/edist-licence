@@ -1,19 +1,24 @@
 package com.erep.dist;
 
+import static javax.mail.Session.getDefaultInstance;
+import static javax.mail.Transport.send;
+
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.mail.Message;
 import javax.mail.Session;
-
-import static javax.mail.Session.getDefaultInstance;
-import static javax.mail.Transport.send;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 import com.google.appengine.api.utils.SystemProperty;
 
 public class Mailer {
+
+	private static Logger	logger	= Logger.getLogger(Mailer.class.getName());
 
 	public class MailAddress {
 		public String	name;
@@ -29,6 +34,10 @@ public class Mailer {
 			this.name = name;
 			this.address = address;
 		}
+
+		public String toString() {
+			return name + ":" + address;
+		}
 	}
 
 	/**
@@ -37,6 +46,8 @@ public class Mailer {
 	 */
 	public void mail(String subject, String message, MailAddress... emails)
 			throws IOException {
+
+		logger.log(Level.WARNING, "Emailing: " + Arrays.toString(emails));
 
 		try {
 			Properties props = new Properties();
@@ -51,8 +62,10 @@ public class Mailer {
 			msg.setContent(message, "text/html");
 
 			for (MailAddress email : emails) {
-				if (email == null)
+				if (email == null || email.address == null) {
+					logger.log(Level.SEVERE, "null email address");
 					continue;
+				}
 				if (email.name == null || email.name.isEmpty())
 					msg.addRecipient(Message.RecipientType.TO,
 							new InternetAddress(email.address));
@@ -65,5 +78,4 @@ public class Mailer {
 			throw new IOException(e);
 		}
 	}
-
 }

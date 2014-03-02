@@ -13,8 +13,13 @@
 			<strong>2014-0X-XX v0.13</strong>
 		</p>
 		<ul>
+			<li>Started tracking guerrilla stats and bombs used</li>
 			<li>Records player division</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/51">#51</a>: Filtering by Division on /players/</li>
 			<li>Bug Fix: properly check employer's auth key</li>
+			<li>Bug Fix: properly check for concomitant distributor access</li>
+			<li>Bug Fix: Some rank images would show with the wrong size</li>
 		</ul>
 			
 		<p>
