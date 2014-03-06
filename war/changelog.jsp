@@ -10,11 +10,18 @@
 		<h2>Changelog</h2>
 
 		<p>
-			<strong>2014-0X-XX v0.13</strong>
+			<strong>2014-03-05 v0.13</strong>
 		</p>
 		<ul>
+			<li>Update do AppEngine SDK 1.9.0</li>
+			<li>Enabled datanucleus L2 cache</li>
+			<li>Removed unused entity links on Player</li>
+			<li>Removed unused indexes</li>
 			<li>Started tracking guerrilla stats and bombs used</li>
+			<li>Slow down logged in queue to lower failure rate</li>
+			<li>Automatically cancels supply tasks stuck in the queue for more than 200 executions</li>
 			<li>Records player division</li>
+			<li>Data migration servlet</li>
 			<li>Issue <a
 				href="https://bitbucket.org/marcelofs/edist/issue/51">#51</a>: Filtering by Division on /players/</li>
 			<li>Bug Fix: properly check employer's auth key</li>
