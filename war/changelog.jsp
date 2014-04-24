@@ -8,12 +8,20 @@
 
 	<jsp:body>
 		<h2>Changelog</h2>
+		
+		<p>
+			<strong>2014-xx-xx v0.15</strong>
+		</p>
+		<ul>
+			<li>Bug Fix: Monthly damage was not being counted</li>
+		</ul>
 
 		<p>
 			<strong>2014-04-08 v0.14</strong>
 		</p>
 		<ul>
 			<li>Added Request Statistics module</li>
+			<li>Added Player Statistics module</li>
 			<li>Shows game's latest events on request page</li>
 			<li>Records distributor inventory after sending items to allow manual check</li>
 			<li>Hidden 'group' column for public access on /players/</li>
