@@ -33,7 +33,7 @@ public class IncomeMailServlet extends HttpServlet {
 			Session session = getInstance(new Properties());
 			MimeMessage message = new MimeMessage(session, req.getInputStream());
 
-			MimeMessageParser parser = new MimeMessageParser(message);
+			MimeMessageParser parser = new MimeMessageParser(message).parse();
 			
 			String subject = new StringBuilder("eDist Incoming Message (")
 					.append(parser.getFrom()).append(")").toString();
@@ -45,9 +45,10 @@ public class IncomeMailServlet extends HttpServlet {
 						.append("CC: ").append(parser.getCc()).append("<br/>")
 						.append("Reply to: ").append(parser.getReplyTo()).append("<br/>")
 						.append("Subject: ").append(parser.getSubject()).append("<br/>")
-						.append("Sent: ").append(message.getSentDate()).append("<br/>")
-						.append("Received: ").append(message.getReceivedDate()).append("<br/></p>");
+						.append("Sent: ").append(message.getSentDate()).append("</p>");
 						
+			
+			
 			text.append("<p>");		
 			if(parser.hasPlainContent())
 				text.append(parser.getPlainContent());
