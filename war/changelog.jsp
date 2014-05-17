@@ -10,9 +10,10 @@
 		<h2>Changelog</h2>
 		
 		<p>
-			<strong>2014-xx-xx v0.15</strong>
+			<strong>2014-05-17 v0.14.1</strong>
 		</p>
 		<ul>
+			<li>Updated to AppEngine SDK 1.9.4</li>
 			<li>Bug Fix: Monthly damage was not being counted</li>
 		</ul>
 
