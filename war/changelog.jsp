@@ -10,6 +10,43 @@
 		<h2>Changelog</h2>
 		
 		<p>
+			<strong>2014-11-XX v0.16</strong>
+		</p>
+		<ul>
+			<li>Fixed avatars not showing after eRepublik moved to Amazon</li>
+			<li>Records employees overtime. Overtime is counted in work verification (1 overtime = -1 missed day of work)</li>
+		</ul>
+		
+		<p>
+			<strong>2014-11-04 v0.15</strong>
+		</p>
+		<ul>
+			<li>Updated to AppEngine SDK 1.9.14</li>
+			<li>Re-enabled request transaction to end "double send"</li>
+			<li>Removed some manual caching, lets JDO take care of those</li>
+			<li>Removed dead/banned counts from graphs because it was too annoying</li>
+			<li>Added missing player links on weekly work table</li>
+			<li>Employer script: updated to report job stats</li>
+			<li>Employer script: lowered auto update window from 6h to 1h</li>
+			<li>Logs the last known IP when updating employer stats</li>
+			<li>Logs date/time for work and fight verifications</li>
+			<li>Improved startup of daily status tasks to lower failure rate</li>
+			<li>Properly clear fields on enabling/disabling players</li>
+			<li>Lots of refactorings to improve data access code quality</li>
+			<li>Added missing political alert icons</li>
+			<li>Bug Fix: (probably) fixed an issue where the total monthly dead count would not be counted</li>
+			<li>Bug Fix: SendResourceTask loop if player changed nickname between scrapping and dist request</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/30">#30</a>: Player Importer</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/77">#77</a>: Racing condition on group loading for /management/</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/88">#88</a>: Management: 'save' feedback on button</li>
+			<li>Issue <a
+				href="https://bitbucket.org/marcelofs/edist/issue/91">#91</a>: Add flags for new countries</li>
+		</ul>
+		
+		<p>
 			<strong>2014-05-17 v0.14.1</strong>
 		</p>
 		<ul>
