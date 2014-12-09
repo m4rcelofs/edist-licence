@@ -18,7 +18,7 @@
 		</ul>
 		
 		<p>
-			<strong>2014-11-04 v0.15</strong>
+			<strong>2014-11-04 v0.15</strong> 
 		</p>
 		<ul>
 			<li>Updated to AppEngine SDK 1.9.14</li>
