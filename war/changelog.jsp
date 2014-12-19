@@ -10,7 +10,16 @@
 		<h2>Changelog</h2>
 		
 		<p>
-			<strong>2014-11-XX v0.16</strong>
+			<strong>2014-12-19 v0.17</strong>
+		</p>
+		<ul>
+			<li>Updated to AppEngine SDK 1.9.17</li>
+			<li>Fixed citizen parser after game changed the profile page</li>
+			<li>Added a config flag to enable/disable request transactions</li> 
+		</ul>
+		
+		<p>
+			<strong>2014-12-09 v0.16</strong>
 		</p>
 		<ul>
 			<li>Fixed avatars not showing after eRepublik moved to Amazon</li>
