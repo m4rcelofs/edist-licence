@@ -110,13 +110,13 @@
 						<th onclick="AdminViewModel.loadLicences(sortByEmail);">Email de Contato</th>
 						<th onclick="AdminViewModel.loadLicences(sortByEdition);">Data da última
 							alteração</th>
-							<th onclick="AdminViewModel.loadLicences(sortByEditor);">Usuário</th>
+						<th></th>
 					</tr>
 				</thead>
 				<tbody data-bind="foreach: licences">
 					<tr
 						data-bind="css: validUntilDay < $root.eRepDay() ? 'danger' 
-									: validUntilDay < ($root.eRepDay + 14) ? 'warning' 
+									: validUntilDay <= ($root.eRepDay() + 5) ? 'warning' 
 									: ''">
 						<td data-bind="text: appId"></td>
 						<td><a data-bind="click: $root.loadPayments">Listar <span
@@ -125,7 +125,11 @@
 						<td data-bind="text: userLimit"></td>
 						<td data-bind="text: contactEmail"></td>
 						<td data-bind="text: editedAt.toLocaleString()"></td>									
-						<td data-bind="text: editedBy"></td>
+						<td>
+							<a data-bind="attr: {href: 'https://' + appId + '.appspot.com/admin/cron/licence'}">
+								Refresh Licence
+							</a>
+						</td>
 					</tr>
 				</tbody>
 			</table>
