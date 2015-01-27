@@ -10,6 +10,17 @@
 		<h2>Changelog</h2>
 		
 		<p>
+			<strong>2014-XX-XX v0.18</strong>
+		</p>
+		<ul>
+			 <li>Updated useragent on scrapper</li>
+			 <li>Fixes work verification overwrite when userscript doesn't cache properly</li>
+			 <li>Auto reloads form if opened on day change</li>
+			 <li>Auto selects max available FF on form load</li>
+			 <li>Added .csv export to /players</li>
+		</ul>
+		
+		<p>
 			<strong>2014-12-19 v0.17</strong>
 		</p>
 		<ul>
