@@ -10,7 +10,7 @@
 		<h2>Changelog</h2>
 		
 		<p>
-			<strong>2014-XX-XX v0.18</strong>
+			<strong>2015-01-27 v0.18</strong>
 		</p>
 		<ul>
 			 <li>Updated useragent on scrapper</li>
