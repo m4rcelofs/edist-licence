@@ -10,6 +10,16 @@
 		<h2>Changelog</h2>
 		
 		<p>
+			<strong>2015-04-08 v0.19</strong>
+		</p>
+		<ul>
+			 <li>Restored 'latest events' feed on /request</li>
+			 <li>Requests are now aborted when player has a full storage</li>
+			 <li>Fixed player being in multiple groups breaking csv export</li>
+			 <li>Fixed a bug where saving the admin configs could break the daily fight verification</li>
+		</ul>
+		
+		<p>
 			<strong>2015-01-27 v0.18</strong>
 		</p>
 		<ul>
