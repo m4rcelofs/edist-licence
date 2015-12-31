@@ -10,6 +10,20 @@
 		<h2>Changelog</h2>
 		
 		<p>
+			<strong>2015-12-31</strong>
+		</p>
+		<ul>
+			<li>Updated prices for new year
+		</ul>
+				
+		<p>
+			<strong>2015-07-28 v0.20</strong>
+		</p>
+		<ul>
+			<li>Emergency fix for game changing URL schemes
+		</ul>
+		
+		<p>
 			<strong>2015-04-08 v0.19</strong>
 		</p>
 		<ul>
